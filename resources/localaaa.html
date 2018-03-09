@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>测试</title>
+</head>
+<body>
+<!--<script src="js/jquery.min.js"></script>-->
+<script src="/resources/js/jquery.min.js"></script>
+
+
+
+<img src="http://localhost:8080/verification/captcha">验证码
+<input id="vCode">
+<button id="login">登录</button>
+<script>
+    $("#login").click(function () {
+        $.ajax({
+            url: 'http://localhost:8080/signin',
+            type: 'post',
+            data: {
+                "loginName":"123456@qq.com",
+                "password":"123456",
+                "verifyCode":$("#vCode").val()
+            },
+            dataType: "json",
+
+            success: function (data) {
+               console.log(data);
+            }
+        })
+    })
+
+</script>
+
+
+<div/>
+<button id="addIssueConf">新增发布配置</button>
+<script>
+    $("#addIssueConf").click(function () {
+        $.ajax({
+            url: 'http://localhost:8080/admin/issueconf',
+            type: 'post',
+            data: {
+                "resourceID":"B1",
+                "issueMethods":"true", //手动
+                "code":"F010100",//60100700
+                "tag":"1",
+                "issueSchema":"false",
+                "authGrade":"",
+                "startDate":"2013-01",
+                "endDate":"2015-01"
+            },
+            dataType: "json",
+
+            success: function (data) {
+                console.log(data);
+            }
+        })
+    })
+
+</script>
+<div/>
+<button id="addDownloadOrder">新增下载订单</button>
+<script>
+    $("#addDownloadOrder").click(function () {
+        $.ajax({
+            url: 'http://localhost:8080/downloadOrder',
+            type: 'post',
+            data: {
+                "station_resourceCodes":"60100700_B1,60113400_B2",
+                "startDate":"2014-01",
+                "endDate":"2018-04"
+            },
+            dataType: "json",
+
+            success: function (data) {
+                console.log(data);
+            }
+        })
+    })
+
+</script>
+
+<div/>
+<button id="removeRole">移除角色</button>
+<script>
+    $("#removeRole").click(function () {
+        $.ajax({
+            url: 'http://localhost:8080/admin/role/304',
+            type: 'delete',
+            dataType: "json",
+
+            success: function (data) {
+                console.log(data);
+            }
+        })
+    })
+</script>
+
+<div/>
+<button id="getUser">查询用户</button>
+<script>
+    $("#getUser").click(function () {
+        $.ajax({
+            url: 'http://localhost:8080/admin/user/info',
+            type: 'get',
+            data: {
+                "user": ""
+            },
+            dataType: "json",
+            xhrFields: {withCredentials: true},
+            success: function (data) {
+                console.log(data);
+            },
+            error:function (jqXHR, statusText, errorThrown) {
+                console.log(jqXHR);
+                console.log(statusText);
+            }
+        })
+    })
+</script>
+
+<div/>
+<button id="deleteIssueConf">注销发布配置</button>
+<script>
+    $("#deleteIssueConf").click(function () {
+        $.ajax({
+            url: 'http://localhost:8080/admin/issueconf/3',
+            type: 'delete',
+            dataType: "json",
+            success: function (data) {
+                console.log(data);
+            }
+        })
+    })
+</script>
+</body>
+</html>

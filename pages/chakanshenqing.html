@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>水文大数据平台</title>
+    <link rel="stylesheet" type="text/css" href="../layui/css/layui.css"/>
+    <link rel="stylesheet" href="../resources/css/style.css">
+</head>
+<style>
+    .col-1, .col-2, .col-3, .col-4, .col-5, .c0l-6, .c0l-7, .col-8, .col-9, .col-10, .c0l-11, .col-12 {
+        float: left;
+    }
+
+    .col-1 {
+        width: 8.33333%;
+    }
+
+    .col-2 {
+        width: 16.66666%;
+    }
+
+    .col-3 {
+        width: 25%;
+    }
+
+    .col-4 {
+        width: 33.333%;
+    }
+
+    .col-5 {
+        width: 41.66666%;
+    }
+
+    .col-6 {
+        width: 50%;
+    }
+
+    .col-7 {
+        width: 58.3333%;
+    }
+
+    .col-8 {
+        width: 66.6666%;
+    }
+
+    .col-9 {
+        width: 75%;
+    }
+
+    .col-10 {
+        width: 83.3333%;
+    }
+
+    .col-11 {
+        width: 91.6666%;
+    }
+
+    .col-12 {
+        width: 100%;
+    }
+
+    .row {
+        width: 100%;
+    }
+
+    .row:after {
+        clear: both;
+        content: '.';
+        display: block;
+        width: 0;
+        height: 0;
+        visibility: hidden;
+    }
+</style>
+<body style="background:#fff;">
+<div class="title">
+    <ul class="title_cata clearfloat">
+        <li class="active"><a href="../pages/chakanshenqing.html">查看申请</a></li>
+        <li><a href="../pages/chakanshenpi.html">查看审批</a></li>
+
+    </ul>
+</div>
+<form class="layui-form ">
+    <div class="catalog catalog1 catalog12">
+        <p>查看申请</p>
+        <div class="ziyuanleixing row">
+            <span>起止时间：</span>
+            <div class="ctdisk_data input-group">
+                <div class="layui-input-inline ">
+                    <input placeholder="时间" lay-verify="required" class=" layui-input" id="date">
+                </div>
+                <div class="layui-input-inline form1">
+                    <button class="layui-btn layui-btn-normal" lay-submit lay-filter="formDemo">查询</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    </div>
+
+
+</form>
+
+<div class="choose_data data_name">
+    <div class="data_title">
+        <ul class="row">
+            <li class="col-2">申请编号</li>
+            <li class="col-2">用户名称</li>
+            <li class="col-2">申请时间</li>
+            <li class="col-2">申请目的</li>
+            <li class="col-2">信息证明</li>
+            <li class="col-2">操作</li>
+        </ul>
+    </div>
+    <div class="data_content">
+        暂无数据
+    </div>
+</div>
+<div class="add_catalog shenpi add_catalog1 add_catalog2">
+    <form>
+        <div class="shenqing">
+            <p>请描述通过审批的理由:</p>
+            <textarea name="" id="" cols="30" rows="10"></textarea>
+        </div>
+        <label class="btn1" for="">
+            <button type="reset">取消</button>
+            <button class="active com" data-num=''>确定</button>
+        </label>
+    </form>
+</div>
+<div class="prove add_catalog1">
+
+    <form action="" class="layui-form" onsubmit="return false">
+        <div class="layui-form-item">
+            <label for="" class="layui-form-label">身份正面：</label>
+            <div class="layui-input-block" id="example1">
+                <img src="" alt="">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label for="" class="layui-form-label">身份反面：</label>
+            <div class="layui-input-block" id="example2"><img src="" alt=""></div>
+        </div>
+        <div class="layui-form-item">
+            <label for="" class="layui-form-label">公司证明：</label>
+            <div class="layui-input-block company_prove"><img src="" alt=""></div>
+        </div>
+    </form>
+</div>
+<input type="hidden" name="applicationID" id="applicationID" value=""/>
+<input type="hidden" name="start" id="start" value=""/>
+<input type="hidden" name="end" id="end" value=""/>
+<input type="hidden" name="ok" id="ok" value=""/>
+<script src="../layui/layui.js" type="text/javascript" charset="utf-8"></script>
+<script src="../resources/js/config.js" type="text/javascript" charset="utf-8"></script>
+<script src="../resources/js/chakanshengqing.js" type="text/javascript" charset="utf-8"></script>
+</body>
+</html>

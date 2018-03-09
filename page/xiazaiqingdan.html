@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>水文大数据平台</title>
+    <link rel="stylesheet" href="../layui/css/layui.css">
+    <link rel="stylesheet" href="../resources/css/desk-style.css">
+    <link rel="stylesheet" href="../resources/css/hover.css">
+    <script src="../resources/js/jquery.min.js"></script>
+    <script src="../layui/layui.js"></script>
+</head>
+<body>
+
+<div class="top">
+
+</div>
+
+<section class="head">
+    <div class="main">
+        <ul class="clearfloat  layui-row">
+            <li class="layui-col-sm4 logo"><img src="../resources/img/logo.png" alt=""><p>水文大数据共享平台</p><p>www.tomylee.top</p></li>
+            <li class="layui-col-sm4"><input type="text" class="layui-input"><i class="head_search">搜索</i></li>
+            <li class="layui-col-sm4"><p>联系电话：<span>400-882-8868</span></p><i class="head_tel"></i></li>
+        </ul>
+    </div>
+</section>
+<nav class=" layui-nav">
+    <div class="main">
+        <ul class="">
+            <li class="layui-nav-item "><a href="../page/index.html">首页</a></li>
+            <li class="layui-nav-item"><a href="../page/xiazaishuju.html">数据下载</a></li>
+            <li class="layui-nav-item"><a href="#">分析服务</a></li>
+            <li class="layui-nav-item layui-this"><a href="../page/gerenziliao.html">个人中心</a></li>
+            <li class="layui-nav-item"><a href="../page/lianxiwomen.html">联系我们</a></li>
+        </ul>
+    </div>
+</nav>
+
+<div class="load_btn">
+    <div class="main">
+        <ul class="clearfloat">
+            <li>
+                <button class="">下载历史</button>
+            </li>
+            <li>
+                <button class="datum">个人资料</button>
+            </li>
+            <li>
+                <button class="inventory active">下载清单</button>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<section class="tab history">
+    <div class="main clearfloat">
+        <form action="" class="layui-form" onsubmit="return false">
+        <div class="downfile">
+            <ul class="clearfloat">
+                <li class="layui-col-md3">文件信息</li>
+                <li class="layui-col-md6">检索时间</li>
+                <!--<li class="layui-col-md3">下载地址</li>-->
+                <li class="layui-col-md3">操作</li>
+            </ul>
+        </div>
+            <div class="zip_fileds">
+                <p style="text-align: center">暂无数据</p>
+            </div>
+
+        <div class="history_btn">
+            <button class="compile" data-id="0">编辑清单</button>
+            <button class="alldown">全部下载</button>
+        </div>
+        </form>
+    </div>
+</section>
+<section class="footer">
+
+</section>
+<h3 class="Provider">京ICP备05000000号-1 Copyright 2005-2016长江水文大数据共享网</h3>
+</body>
+<script src="../resources/js/config.js"></script>
+<script src="../resources/js/login.js"></script>
+<script src="../resources/js/islogin.js"></script>
+<script src="../resources/js/downorder.js"></script>
+<script>
+    $(function(){
+        $('.footer').load('../page/footer.html');
+    })
+</script>
+</html>

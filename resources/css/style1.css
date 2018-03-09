@@ -1,0 +1,143 @@
+/*新增复写*/
+.catalog .add_catalog{
+	position: inherit;
+	float: left;
+	/*margin-left: 30px;*/
+	border:0;
+	background: none;
+}
+.add_catalog button:hover{
+	background: #2281dd;
+	color:#fff;
+}
+.nav1>li{
+	line-height: 40px;
+}
+.nav1 li i{
+	margin-top: 12px;
+}
+.nav1 li a .glyphicon{
+	margin-top: 12px;
+}
+.catalog .layui-input-block{
+	float: left;
+	margin-left: 0;
+	margin-right: 30px;
+}
+.data_content li button{
+	cursor: pointer;
+}
+.add_catalog h3 i{
+	background: url("../img/icon_tc.png") no-repeat;
+	-webkit-background-size: 100%;
+	background-size: 100%;
+}
+.add_catalog h3 b:after{
+	content:'';
+}
+.download{
+	width: 1200px;
+}
+.download form{
+	padding-left: 0px;
+}
+.download_title{
+	margin-bottom: 40px;
+	margin-left: 40px;
+}
+.download_title li,.download_title li span{
+	font-size: 22px;
+	color: #666666;
+	line-height: 50px;
+
+}
+.download_content .download_top li {
+	font-size: 20px;
+	color: #2281DD;
+	text-align: center;
+}
+.download_title li i{
+	float: left;
+	width: 50px;
+	height: 50px;
+	background: url("../img/icon_zip.png") no-repeat;
+	background-size:100%;
+	margin-right: 20px;
+}
+
+.download_content ul li{
+	font-size: 20px;
+	color: #333333;
+	text-align: center;
+	padding:15px 0;
+}
+.download_content ul{
+	border-bottom:1px dashed #ccc;
+	padding-left: 40px;
+}
+.download_content ul li i{
+	float: left;
+	width: 30px;
+	height: 30px;
+	background: url("../img/icon_txt.png") no-repeat;
+	-webkit-background-size: 100%;
+	background-size: 100%;
+}
+.updown label span{
+	float: left;
+	font-size: 16px;
+	color: #666666;
+	width: 80px;
+	text-align: right;
+	margin-right: 10px;
+	line-height: 40px;
+}
+.updown .layui-input-block{
+	/*margin: 0;*/
+}
+.updown .layui-input{
+	padding-right: 0;
+}
+.add_role{
+	width: 800px;
+	position: absolute;
+	top: 140px;
+	left: 240px;
+	border:1px solid #288CE3;
+	background: #F8F8F8;
+}
+.add_catalog.add_role .layui-input-block{
+	margin-left: 0;
+	float: left;
+	margin-right: 30px;
+}
+.add_role .input{
+	margin-right: 0;
+}
+.add_role .layui-input-block input{
+	width: 170px;
+	margin-right: 0px;
+}
+.catalog_tree1{
+	
+}
+.catalog .add_catalog00{
+	    position: inherit;
+    float: left;
+    /* margin-left: 30px; */
+    border: 0;
+    background: none;
+    
+}
+.catalog_tree1 {
+    float: left;
+    width: 400px;
+    height: 730px;
+    overflow-y: scroll;
+}
+.add_catalog00 .layui-unselect{
+	width: 250px;
+}
+.add_catalog00 .layui-form-select .layui-input{
+	width: 250px;
+}

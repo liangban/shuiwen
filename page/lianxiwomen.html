@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>水文大数据平台</title>
+    <link rel="stylesheet" href="../layui/css/layui.css">
+    <link rel="stylesheet" href="../resources/css/desk-style.css">
+    <link rel="stylesheet" href="../resources/css/hover.css">
+    <script src="../resources/js/jquery.min.js"></script>
+    <script src="../layui/layui.js"></script>
+</head>
+<body>
+
+<div class="top">
+</div>
+
+<section class="head">
+    <div class="main">
+        <ul class="clearfloat  layui-row">
+            <li class="layui-col-sm4 logo"><img src="../resources/img/logo.png" alt=""><p>水文大数据共享平台</p><p>www.tomylee.top</p></li>
+            <li class="layui-col-sm4"><input type="text" class="layui-input"><i class="head_search">搜索</i></li>
+            <li class="layui-col-sm4"><p>联系电话：<span>400-882-8868</span></p><i class="head_tel"></i></li>
+        </ul>
+    </div>
+</section>
+<nav class=" layui-nav">
+    <div class="main">
+        <ul class="">
+            <li class="layui-nav-item"><a href="../page/index.html">首页</a></li>
+            <li class="layui-nav-item"><a href="../page/xiazaishuju.html">数据下载</a></li>
+            <li class="layui-nav-item"><a href="#">分析服务</a></li>
+            <li class="layui-nav-item"><a href="../page/gerenziliao.html">个人中心</a></li>
+            <li class="layui-nav-item layui-this"><a href="../page/lianxiwomen.html">联系我们</a></li>
+        </ul>
+    </div>
+</nav>
+
+
+<section class="about_us contact">
+    <div class="main">
+        <!-- <h3>联系我们</h3> -->
+        <ul class="clearfloat about_list">
+            <li class="active"><a href="javascript:void(0);">在线留言</a></li>
+            <li><a href="javascript:void(0);">联系方式</a></li>
+
+        </ul>
+        <div class="message" id="us" style="display: block;">
+            <h2></h2>
+            <form action='' class="layui-form" onsubmit="return false;">
+                <div class="layui-form-item">
+                    <!--<label for="" class="layui-form-label">用途说明</label>-->
+                    <div class="layui-input-block">
+                        <input type="text" name="name" placeholder="姓名" autocomplete="off" class="layui-input">
+                    </div>
+                    <div class="layui-input-block">
+                        <input type="text" name="email" placeholder="邮箱" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+
+                <div class="layui-form-item">
+                    <!--<div class="layui-input-block">-->
+                        <textarea name="content" id="" cols="30" rows="10"></textarea>
+                    <!--</div>-->
+                </div>
+                <div class="layui-form-item">
+                    <button class="layui-btn" lay-submit lay-filter="contactus">立即提交</button>
+                </div>
+            </form>
+        </div>
+        <div class="message" id="address">
+            <h2></h2>
+            <ul class="clearfloat">
+                <li><img src="../resources/img/icon_address.png" alt="">
+                    <p>公司地址<span>湖北省武汉市武昌区八一路299号</span></p>
+                </li>
+                <li><img src="../resources/img/icon_telphone.png" alt="">
+                    <p>联系电话<span>400-818-6666</span></p>
+                </li>
+                <li><img src="../resources/img/icon_mail.png" alt="">
+                    <p>电子邮箱<span>abc@sina.com</span></p>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+<section class="footer">
+
+</section>
+<h3 class="Provider">京ICP备05000000号-1 Copyright 2005-2016长江水文大数据共享网</h3>
+</body>
+<script src="../resources/js/config.js"></script>
+<script src="../resources/js/login.js"></script>
+<script>
+    $(function(){
+        $('.footer').load('../page/footer.html');
+        $('.top').load('../page/top.html')
+        $('.history .down_doc li button').on('click',function(){
+
+            $(this).parents('.down_doc').next().toggle();
+
+        })
+        $('.down_doc input').attr('info-data','0');
+        $('.compile').on('click',function(){
+//            $('.down_doc').append("<b></b>")
+
+            var data=$('.down_doc input').attr('info-data');
+            if(data==0){
+                console.log(data)
+                $('.down_doc input').attr('info-data','1');
+                $(this).text('批量删除');
+                $('.layui-unselect').show();
+                console.log(data)
+            }
+            else if(data==1){
+                console.log(1)
+                $('.down_doc input').attr('info-data','0');
+
+                $(this).text('编辑清单');
+                $('.layui-unselect').hide();
+            }
+        })
+        $('.about_us ul.about_list li').on('click',function(){
+            $('.about_us ul.about_list li').removeClass('active');
+            $(this).addClass('active');
+            var num=$(this).index('.about_us ul.about_list li');
+            $('.message').hide();
+            $('.message').eq(num).show()
+        })
+
+    })
+</script>
+</html>

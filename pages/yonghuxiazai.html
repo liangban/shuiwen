@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>水文大数据平台</title>
+    <link rel="stylesheet" type="text/css" href="../layui/css/layui.css"/>
+    <link rel="stylesheet" href="../resources/css/style.css">
+    <link rel="stylesheet" href="../resources/css/lanrenzhijia.css">
+    <script src="../resources/js/jquery.min.js"></script>
+    <script src="../resources/js/jquery.imgbox.pack.js"></script>
+</head>
+<style>
+    .col-1, .col-2, .col-3, .col-4, .col-5, .c0l-6, .c0l-7, .col-8, .col-9, .col-10, .c0l-11, .col-12 {
+        float: left;
+    }
+
+    .col-1 {
+        width: 8.33333%;
+    }
+
+    .col-2 {
+        width: 16.66666%;
+    }
+
+    .col-3 {
+        width: 25%;
+    }
+
+    .col-4 {
+        width: 33.333%;
+    }
+
+    .col-5 {
+        width: 41.66666%;
+    }
+
+    .col-6 {
+        width: 50%;
+    }
+
+    .col-7 {
+        width: 58.3333%;
+    }
+
+    .col-8 {
+        width: 66.6666%;
+    }
+
+    .col-9 {
+        width: 75%;
+    }
+
+    .col-10 {
+        width: 83.3333%;
+    }
+
+    .col-11 {
+        width: 91.6666%;
+    }
+
+    .col-12 {
+        width: 100%;
+    }
+
+    .row {
+        width: 100%;
+    }
+
+    .row:after {
+        clear: both;
+        content: '.';
+        display: block;
+        width: 0;
+        height: 0;
+        visibility: hidden;
+    }
+</style>
+<body style="background:#fff;">
+<div class="title">
+    <ul class="title_cata clearfloat">
+        <li><a href="../pages/shujuxiazai.html">数据下载查看</a></li>
+        <li class="active"><a href="../pages/yonghuxiazai.html">用户下载查看</a></li>
+
+    </ul>
+</div>
+<form class="layui-form" > 
+	<div class="catalog catalog1">
+	    <p>查看配置</p>
+	 
+	    <div class="ziyuanleixing row">
+	        <span>用户名：&nbsp;&nbsp;&nbsp;</span>
+	        <div class="layui-input-inline ">
+				<div class="layui-input-inline ">
+	                <input type="text" placeholder="请输入用户名" lay-verify="required" class=" layui-input" name="user">
+	             </div>
+			</div>
+		</div>
+			<div class="ziyuanleixing row">
+	        <span>起止时间：</span>
+	        <div class="ctdisk_data input-group">
+	            <div class="layui-input-inline ">
+	                <input type="text" placeholder="时间" lay-verify="required" class=" layui-input" id="date">
+	             </div>
+	             <div class="layui-input-inline form1">
+					<button class="layui-btn layui-btn-normal" lay-submit lay-filter="formDemos" >查询</button>
+	        	 </div>
+	        </div>
+	        </div>
+	  </div>
+</form>
+
+
+<div class="choose_data data_name">
+    <div class="data_title">
+        <ul class="row">
+            <li class="col-1">订单编号</li>
+            <li class="col-3">文件名称</li>
+            <li class="col-2">开始时间</li>
+            <li class="col-1">结束时间</li>
+            <li class="col-4">下载地址</li>
+            <li class="col-1">操作</li>
+        </ul>
+    </div>
+    <div class="data_content data_name3">
+       	暂无数据
+    </div>
+
+</div>
+<div class="choose_data data_name data_name1">
+    <div class="data_title">
+        <ul class="row">
+            <li class="col-1">下载编号</li>
+            <li class="col-3">项目名称</li>
+            <li class="col-2">开始时间</li>
+            <li class="col-2">结束时间</li>
+            <li class="col-2">资源名称</li>
+            <li class="col-2">测站</li>
+        </ul>
+    </div>
+    <div class="data_content data_name2">
+        暂无数据
+    </div>
+
+</div>
+
+
+<script src="../layui/layui.js" type="text/javascript" charset="utf-8"></script>
+<script src="../resources/js/config.js" type="text/javascript" charset="utf-8"></script>
+<script src="../resources/js/yonghuxiazai.js" type="text/javascript" charset="utf-8"></script>
+<input type="hidden" name="start" id="start" value="" />
+<input type="hidden" name="end" id="end" value="" />
+</body>
+<script>
+    $(function () {
+
+        $('.data_content .compile .active').on('click', function () {
+            $('.layer').fadeIn();
+            $('.layer .shenpi').animate({
+                opacity:'show',
+                marginTop:'12'
+            },'slow',function(){
+            })
+        })
+        $('.add_catalog h3 b').on('click', function () {
+            $('.layer').fadeOut();
+            $('.layer .shenpi').animate({
+                opacity:'show',
+                marginTop:'0'
+            },'slow',function(){
+            })
+        })
+
+    })
+</script>
+
+</html>

@@ -1,0 +1,1273 @@
+/*全局样式*/
+*{ padding:0; margin:0; font-size:14px; font-family:"微软雅黑"; }
+/*body{background: #f2f2f2;}*/
+ul,li,dl,dt,dd,h1,h2,h3,h4,h5,h6,form,p { padding:0; margin:0;}
+ul{list-style:none;}
+img{border:0px;}
+a{ text-decoration:none;}
+.clearfloat:after{
+    clear:both;content:'.';display:block;width: 0;height: 0;visibility:hidden;
+}
+button{
+	cursor: pointer;
+}
+
+.top{
+	background: #35393C;
+	width: 100%;
+	height:58px;
+	line-height: 58px;
+}
+.main{
+	width: 1200px;
+	margin: 0 auto;
+}
+.top .welcome{
+	float: left;
+	font-size: 20px;
+	color: #FFFFFF;
+}
+.top .login{
+	float: right;
+}
+.top .login ul li{
+	float: left;
+	margin-right: 30px;
+	line-height: 58px;
+}
+.top .login li:last-child{
+	margin-right: 0;
+}
+.login ul li a{
+	display: block;
+	font-size: 16px;
+	color: #999999;
+}
+.login ul li i{
+	float: left;
+	width: 22px;
+	height: 22px;
+	background: #fff;
+	margin-right: 6px;
+	margin-top: 19px;
+}
+.login .login_1{
+	color: #FE8E33;
+	cursor: pointer;
+}
+.login .login_2{
+	color: #28A8E3;
+	cursor: pointer;
+}
+.login .login_1 i{
+	background: url("../img/login.png") no-repeat;
+	-webkit-background-size: 100%;
+	background-size: 100%;
+}
+.login .login_2 i{
+	background: url("../img/sign.png") no-repeat;
+	-webkit-background-size: 100%;
+	background-size: 100%;
+}
+.logo{
+	cursor: pointer;
+}
+.logo img {
+	width: 100px;
+	height: 80px;
+	float: left;
+	margin-top: -15px;
+	margin-right: 20px;
+}
+.logo p {
+	line-height: 20px;
+	font-size: 20px;
+}
+.logo p:last-child {
+	line-height: 30px;
+}
+.head{
+	height: 120px;
+}
+.head li{
+	float: left;
+	margin-top: 24px;
+}
+.head li i.head_tel{
+	float: right;
+	width: 50px;
+	height: 50px;
+	background: url("../img/icon_tel.png") no-repeat;
+	-webkit-background-size: 100%;
+	background-size: 100%;
+	margin-right: 10px;
+}
+.head li:last-child p{
+	font-size: 16px;
+	color: #999999;
+	float: right;
+}
+.head li:last-child p span{
+	font-size: 24px;
+	color: #2281DD;
+	display: block;
+}
+.head li input{
+	width: 300px;
+	height: 45px;
+	float: left;
+	border-radius: 5px 0 0 5px;
+	border-right:0;
+}
+.head li i.head_search{
+	float: left;
+	background: #2281DD;
+	font-style: normal;
+	height: 43px;
+	border:1px solid #ccc;
+	width: 80px;
+	text-align: center;
+	line-height: 42px;
+	font-size: 20px;
+	color: #FFFFFF;
+	border-radius: 0 5px 5px 0;
+	cursor: pointer;
+}
+nav.layui-nav{
+	background: #2281DD;
+	height: 80px;
+}
+nav.layui-nav li a{
+	font-size: 24px;
+	color: #FE8E33;
+	line-height: 80px;
+}
+nav.layui-nav .layui-this:after{
+	top:0;
+	background: #FE8E33;
+}
+nav.layui-nav .layui-this a{
+    color: #FE8E33;
+    background: #fff;
+}
+nav.layui-nav .layui-nav-bar{
+	top: 0!important;
+	background: #FE8E33;
+}
+nav.layui-nav .layui-nav-item a:hover{
+	color: #FE8E33;
+}
+.layui-nav .layui-nav-item a{
+	color:#fff;
+}
+
+.content{
+	background: url("../img/banner.png") no-repeat;
+}
+
+.content form{
+    width: 350px;
+    /*height: 500px;*/
+    background: rgba(0,0,0,0.50);
+    margin-top: 50px;
+    float: right;
+    padding: 0 40px;
+	margin-bottom: 50px;
+}
+.content form h3{
+	text-align: center;
+	font-size: 24px;
+	color: #FFFFFF;
+	font-weight: 100;
+	padding-top:25px;
+}
+.content form .layui-form-label{
+	width: 20px;
+    background: #fff;
+    text-align: center;
+    color: #2281DD;
+    height: 32px;
+    line-height: 36px;
+    font-size: 22px;
+}
+.content form .layui-input-block{
+	margin-left: 50px;
+}
+.content .layui-input-block input{
+    border: 0;
+    border-radius: 0;
+    height: 50px;
+}
+.content .layui-form-item{
+	margin-top: 30px;
+}
+.content .content_auth .layui-input-block{
+	float: left;
+	margin: 0;
+}
+.content_auth .auth_code{
+    float: right;
+    width: 100px;
+    background: #fff;
+    height: 50px;
+}
+.content_auth .auth_code img{
+	width: 100%;
+	height: 100%;
+}
+.content .content_checkbox .layui-input-block{
+	margin: 0;
+}
+.content .content_checkbox .layui-unselect span{
+	font-size: 16px;
+	color: #FFFFFF;
+}
+.content .content_checkbox a{
+	font-size: 16px;
+	color: #FFFFFF;
+	text-decoration: underline;
+	float: right;
+    line-height: 36px;
+}
+.content .layui-form-item .layui-btn{
+	width: 100%;
+	background: #FE8E33;
+	height: 50px;
+}
+.content .content_btn .layui-input-block{
+	margin: 0;
+}
+.content .content_btn button{
+	font-size: 24px;
+	color: #FFFFFF;
+}
+.content .layui-form-item:last-child p{
+	text-align: right;
+}
+.layui-form-item:last-child a{
+	text-decoration: underline;
+	color: #2281DD;
+}
+.map{
+	margin-top: 40px;
+}
+.map .map_catalog{
+	width: 410px;
+	float: left;
+}
+.map .map_catalog h3{
+	height: 60px;
+	background: #2281DD;
+	font-size: 24px;
+	padding-left:20px;
+	line-height: 60px;
+	color:#fff;
+}
+.map_catalog h3 i{
+	float: left;
+	width: 32px;
+	height: 23px;
+	background: url(../img/icon_daohang.png) no-repeat;
+	margin-top: 20px;
+	margin-right: 10px;
+}
+.map_catalog li {
+	/*height: 100px;*/
+	padding:16px 0;
+	padding-left: 40px;
+	border:1px solid #ddd;
+	border-top:0;
+}
+.map_catalog li i{
+	float: left;
+	width: 24px;
+	height: 24px;
+	background: url(../img/icon_shuizhi.png) no-repeat;
+	-webkit-background-size: 100%;
+	background-size: 100%;
+    margin-top: 12px;
+    margin-right: 10px;
+}
+.map_catalog li p{
+	font-size: 24px;
+	color: #333333;
+    line-height: 45px;
+}
+.map_catalog li span{
+	font-size: 18px;
+	color: #5B6D7E;
+	display: block;
+	line-height: 22px;
+}
+.map_right{
+	float: right;
+	border:1px solid #ddd;
+}
+.login_content>img{
+	position: absolute;
+	width: 100%;
+	z-index: -1;
+}
+.login_content .main{
+	padding-top: 137px;
+}
+.login_content form{
+	width: 640px;
+	margin:0 auto;
+	/*margin-top: 137px;*/
+	background: #fff;
+}
+.login_content h3{
+	padding-top: 60px;
+	font-size: 30px;
+	color: #333333;
+	padding-left: 40px;
+	padding-bottom: 60px;
+}
+.login_content h3 a{
+	font-size: 30px;
+	text-decoration: underline;
+	color:#2281DD;
+}
+.login_content .layui-form-item{
+	margin: 0 100px;
+	margin-bottom: 30px;
+}
+.login_content .layui-form-label{
+	width: 19px;
+	border:1px solid #e6e6e6;
+	border:0;
+	height: 30px;
+	line-height: 30px;
+}
+.login_content .layui-input-block{
+	border-left:0;
+	margin-left: 50px;
+	margin-right: 70px;
+}
+.login_content .layui-input-block input{
+	border:0;
+	height: 50px;
+}
+.login_content .layui-form-item i{
+	float: left;
+	width: 26px;
+	height: 26px;
+}
+.login_content .user_name{
+	background: url(../img/username.png) no-repeat;
+	-webkit-background-size: 100%;
+	background-size: 100%;
+}
+.login_content .form_password{
+	background: url(../img/password.png) no-repeat;
+	-webkit-background-size: 100%;
+	background-size: 100%;
+}
+.login_content .form_key{
+	background: url(../img/yanzhengma.png) no-repeat;
+	-webkit-background-size: 100%;
+	background-size: 100%;
+}
+.login_content .border{
+	border:1px solid #e6e6e6;
+}
+.login_content .content_auth{
+	float: left;
+	clear:none;
+	margin-right: 0;
+}
+.login_conetnt .content_auth .layui-input-block{
+	margin: 0;
+}
+.login_content .auth_code{
+	    float: right;
+    margin-left: 0;
+    clear: none;
+    height: 50px;
+    width: 140px;
+}
+.login_content .auth_code img{
+	width: 100%;
+	display: block;
+	height: 100%;
+	cursor: pointer;
+}
+.login_content .content_checkbox .layui-input-block{
+	margin: 0;
+}
+.login_content .content_checkbox i{
+	width: 18px;
+	height: 18px;
+}
+.login_content .content_checkbox span{
+	font-size: 20px;
+	color:#666;
+	line-height: 19px;
+}
+.login_content .content_checkbox .layui-input-block a{
+	float: right;
+	font-size: 20px;
+	color: #429FFC;
+	text-decoration: underline;
+}
+.login_content .content_btn .layui-input-block{
+	margin: 0;
+	padding-bottom: 140px;
+}
+.content_btn .layui-input-block button{
+	width: 100%;
+	background: #2281DD;
+	font-size: 24px;
+	color: #FFFFFF;
+	height: 50px;
+}
+.login_content .auth_code button{
+	width: 100%;
+	height: 100%;
+	background: #2281DD;
+	border:1px solid #2281DD;
+	font-size: 20px;
+	color: #FFFFFF;
+}
+.arrows{
+	    width: 27px;
+    height: 27px;
+    background: url(../img/arrows.png) no-repeat;
+    -webkit-background-size: 100%;
+    background-size: 100%;
+    display: inline-block;
+}
+.login_content .login_title p{
+	font-size: 22px;
+	color: #333333;
+}
+
+.newdata{
+	margin-top: 40px;
+}
+.newdata .main>h3{
+	height: 60px;
+	background: #2281DD;
+	padding: 0 20px;
+	line-height: 60px;
+	font-size: 24px;
+	color: #FFFFFF;
+}
+.newdata .main>h3 i{
+	float: left;
+	width: 28px;
+	height: 28px;
+	background: url(../img/icon_dongtai.png) no-repeat;
+	-webkit-background-size: 100%;
+	background-size: 100%;
+	margin-right: 10px;
+	margin-top: 17px;
+}
+.newdata .main>h3 span{
+	float: right;
+	font-size: 24px;
+	color:#fff;
+}
+.newdata .main>h3 b{
+	font-size: 24px;
+}
+.newdata ul.data-left{
+	width: 780px;
+	float: left;
+	
+}
+.newdata .data-left li h3{
+	float: left;
+	font-size: 50px;
+	text-align: center;
+	margin-right: 18px;
+	/*line-height: 70px;*/
+	color: #4A90E2;
+}
+.newdata .data-left li h3 span{
+	display: block;
+	font-size: 20px;
+	color: #4A90E2;
+	line-height: 46px;
+}
+.newdata .data-left li{
+	padding:20px 40px;
+	border:1px solid #ddd;
+	border-top:0;
+}
+.newdata .data-left li p{
+	float: left;
+	width: 600px;
+	font-size: 24px;
+    line-height: 31px;
+}
+.newdata .data-left li p span{
+	display: -webkit-box;
+-webkit-box-orient: vertical;
+-webkit-line-clamp: 2;
+overflow: hidden;
+font-size: 18px;
+}
+.newdata .main>div{
+	float: right;
+}
+.data_product,.knowledge{
+	width: 410px;
+	padding-bottom: 40px;
+	border:1px solid #ddd;
+	border-top:0;
+}
+.newdata .data_product p,.knowledge p{
+	/*float: left;*/
+	font-size: 24px;
+	color: #666666;
+	padding-top: 20px;
+	margin-left: 15px;
+}
+.knowledge p{
+	margin-bottom: 30px;
+}
+.knowledge{
+	padding-bottom: 24px;
+}
+.data_product p i,.knowledge p i{
+	float: left;
+	width: 34px;
+	height: 34px;
+	background: url(../img/icon_list.png) no-repeat;
+}
+.data_product img{
+	display: block;
+	margin-bottom: 10px;
+}
+.data_product ul{
+	margin-top: 40px;
+	padding-left: 6px;
+}
+.data_product li{
+	float: left;
+	font-size: 18px;
+	color: #5B6D7E;
+	margin:0 15px;
+}
+.knowledge p i{
+	background: url(../img/icon_zhishifuwu.png) no-repeat;
+}
+.knowledge .conter{
+	width: 210px;height: 120px;
+	background: #009DE0;
+	border-radius: 4px;
+	font-size: 24px;
+	color: #FFFFFF;
+	line-height: 120px;
+	text-align: center;
+	float: left;
+	margin-left: 15px;
+}
+.knowledge ul{
+	float: right;
+	margin-right: 50px;
+	margin-top: -10px;
+}
+.knowledge ul li{
+    padding: 6px 0;
+    border-bottom: 1px solid #ccc;
+}
+.knowledge ul li:first-child{
+	padding-top: 0;
+}
+.knowledge ul li a{
+	font-size: 16px;
+	color: #5B6D7E;
+	display: block;
+}
+.knowledge ul li b{
+	float: left;
+	width: 20px;
+	height: 20px;
+	border-radius: 20px;
+	background: #98D8F6;
+	text-align: center;
+	line-height: 20px;
+	margin-right: 10px;
+}
+
+.station{
+	margin-top: 40px;
+}
+.station ul li{
+	width: 324px;
+	float: left;
+	text-align: center;
+	padding: 28px;
+	border:1px solid #ccc;
+	margin-top: 10px;
+	transition: all .5s;
+	margin-right: 25px;
+}
+.station ul li:last-child{
+	margin-right: 0;
+}
+.station li img{
+	margin-top: 36px;
+	margin-bottom: 16px;
+}
+.station li p{
+	margin-bottom: 35px;
+}
+.station li p span{
+	display: block;
+	font-size: 24px;
+	color: #333333;
+}
+.station li .station_text span{
+	font-size: 16px;
+	color: #333333;
+	line-height: 22px;
+	margin-top: 20px;
+	display: block;
+}
+.station .station_text .sta_information{
+	font-size: 16px;
+	color: #999999;
+}
+
+.footer{
+	background: #26323E;
+	margin-top: 100px;
+	padding-top: 30px;
+}
+.footer p{
+	border-bottom:1px solid #38434d;
+	/*margin-top: 30px;*/
+	padding-bottom: 16px;
+}
+.footer p span{
+	font-size: 24px;
+	color: #288CE3;
+}
+.footer p span:before{
+	content:'|';
+	font-size: 24px;
+	color:#288ce3;
+	padding-right: 16px;
+	font-weight: bold;
+}
+.footer .img_link li{
+	float: left;
+	margin-right: 50px;	
+	margin-top: 30px;	
+}
+.footer .img_link a{
+	float: left;
+	width: 160px;	
+	height: 50px;	
+	background: #fff;
+}
+.footer .about>ul>li{
+	float: left;
+	width: 250px;
+	padding-left: 10px;
+}
+.footer .about>ul>li a{
+	font-size: 14px;
+	color: #FFFFFF
+}
+.about{
+	margin-top: 60px;
+	padding-bottom: 40px;
+}
+.about>ul>li span{
+	display: block;
+	font-size: 20px;
+	color: #FFFFFF;
+	margin-bottom: 10px;
+}
+.about>ul>li{
+	margin-top: 6px;
+}
+h3.Provider{
+	background: #1D2731;
+	font-size: 16px;
+	color: #FFFFFF;
+	text-align: center;
+	height: 66px;
+	line-height: 66px;
+}
+
+.choose{
+	margin-top: 50px;
+}
+.choose .layui-input-block{
+	float: left;
+	width: 270px;
+	margin-left: 0;
+	margin-right: 30px;
+}
+.choose h3{
+	font-size: 24px;
+	color: #FE8E33;
+	margin-bottom: 20px;
+}
+.choose .layui-input-block:last-child{
+	width: 400px;
+}
+
+/*.choose .layui-input-block:last-child i{*/
+	/*float: left;*/
+    /*background: #2281DD;*/
+    /*font-style: normal;*/
+    /*height: 43px;*/
+    /*border: 1px solid #ccc;*/
+    /*width: 80px;*/
+    /*text-align: center;*/
+    /*line-height: 42px;*/
+    /*font-size: 20px;*/
+    /*color: #FFFFFF;*/
+    /*border-radius: 0 5px 5px 0;*/
+    /*cursor: pointer;*/
+/*}*/
+.choose .layui-input-block input{
+	height: 45px;
+}
+.choose_basin{
+	margin-top: 50px;
+}
+.choose_basin h3{
+	font-size: 24px;
+    color: #FE8E33;
+    margin-bottom: 20px;
+}
+.choose_basin .map_basin{
+	border:1px solid #ddd;
+}
+.survey_station h3{
+	font-size: 24px;
+	color: #FE8E33;
+	margin-top: 50px;	
+	margin-bottom: 20px;	
+}
+.survey_station .checkbox .layui-form-checkbox{
+	margin-right: 50px;
+}
+.survey_station .layui-input-inline input{
+	height: 50px;
+}
+.survey_station .layui-inline button{
+	background: #2281DD;
+	width: 200px;
+	height: 50px;
+	border-radius: 4px;
+	font-size: 20px;
+	color: #FFFFFF;
+	border:0;
+}
+.download h3{
+	background: #2281DD;
+	font-size: 24px;
+	color: #FFFFFF;
+	height: 60px;
+	line-height: 60px;
+}
+.download h3 i{
+	float: left;
+	width: 28px;
+	height: 28px;
+	background: url(../img/icon_dongtai.png) no-repeat;
+	-webkit-background-size: 100%;
+	background-size: 100%;
+	    margin-top: 17px;
+    margin-left: 17px;
+    margin-right: 10px;
+}
+.download .down_zip i{
+	float: left;
+	width: 68px;
+	height: 68px;
+	background: url(../img/icon_zip.png) no-repeat;
+	-webkit-background-size: 100%;
+	background-size: 100%;
+	margin-right: 30px;
+	margin-left: 30px;
+	margin-top: 16px;
+	height: 100px;
+}
+.download .down_zip{
+	line-height: 100px;
+	box-shadow: 1px 1px 6px #ccc;
+}
+.download .down_btn{
+	float: right;
+}
+.download .down_btn button{
+	width: 150px;
+	height: 50px;
+	font-size: 20px;
+	color: #2281DD;
+	margin-right: 30px;
+	background: #fff;
+	border:1px solid #2281DD;
+	cursor: pointer;
+}
+.download .down_btn button.active{
+	background: #2281dd;
+	color:#fff;
+
+}
+.download .down_name ul li{
+	height: 60px;
+	text-align: center;
+	line-height: 60px;
+	font-size: 14px;
+	color: #2281DD;
+}
+.download .down_catalog ul li{
+	height: 60px;
+	text-align: center;
+	line-height: 60px;
+	font-size: 14px;
+	color: #333333;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+.download .down_name{
+	border:1px solid #ccc;
+	border-top: 0;
+	border-bottom: 0;
+}
+.download .down_catalog{
+	border:1px solid #ccc;
+	border-top: 0;
+}
+.download .down_catalog ul{
+	border-top: 1px dashed #ccc;
+}
+
+.load_btn {
+	margin-top: 80px;
+}
+.load_btn button{
+	width: 120px;
+	height: 50px;
+	background: #F3F8FC;
+	font-size: 20px;
+	color: #666666;
+	border:0;
+	cursor: pointer;
+}
+.load_btn ul li{
+	float: left;
+	margin-right: 20px;
+}
+.load_btn ul li .active{
+	background: #2281dd;
+	color: #FFFFFF;
+}
+.history{
+	margin-top: 50px;
+}
+.downdate{
+	height: 80px;
+	background: #F7F8FA;
+	padding:0 30px;
+}
+.downdate .layui-form-label{
+	font-size: 20px;
+	color: #666666;
+	width: 100px;
+    line-height: 60px;
+}
+.downdate .layui-input-inline{
+	margin-top: 20px;
+}
+.downdate .layui-inline button{
+	border:0;
+	background: #2281dd;
+	width: 140px;
+	height: 36px;
+	font-size: 16px;
+	color: #FFFFFF;
+}
+.downdate .layui-form-item .layui-inline{
+	margin-right: 60px;
+}
+.history .downfile{
+	background: #E9F7FE;
+	height: 48px;
+}
+.history .downfile ul li{
+	line-height: 48px;
+	text-align: center;
+	font-size: 16px;
+	color: #666666;
+}
+.history .down_doc{
+	border:1px solid #E9F7FE;
+}
+.history .down_doc li{
+	text-align: center;
+	padding:25px 0;
+	font-size: 16px;
+	color: #666666;
+}
+.history .down_doc li i{
+	float: left;
+	width: 50px;
+	height: 50px;
+	background: url(../img/icon_zip.png) no-repeat;
+	-webkit-background-size: 100%;
+	background-size: 100%;
+	    margin-left: 40px;
+    margin-right: 20px;
+}
+.history .down_doc li p{
+	/*float: left;*/
+	text-align: left;
+	
+}
+.history .down_doc li p span{
+	display: block;
+	font-size: 16px;
+	color: #666666;
+	line-height: 24px;
+}
+.history .down_doc li span{
+	font-size: 16px;
+	color: #666666;
+	display: block;
+	line-height: 22px;
+}
+.history .down_doc li button{
+	border: 1px solid #2281DD;
+	width: 100px;
+	height: 36px;
+	background: none;
+	font-size: 16px;
+	color: #2281DD;
+	cursor: pointer;
+}
+.history .download .down_name{
+	border:1px solid #E9F7FE;
+	    border-top: 0;
+    border-bottom: 0;
+}
+.history .download .down_catalog{
+	    border: 1px solid #E9F7FE;
+    border-top: 0;
+}
+.history .download{
+	display: none;
+}
+#down_page{
+	/*float: right;*/
+	margin-top: 80px;
+	text-align: center;
+}
+.info{
+	margin-top: 50px;
+	position: relative;
+}
+.info>form>p{
+	    padding-left: 50px;
+    font-size: 26px;
+    color: #666666;
+    position: relative;
+    overflow: hidden;
+}
+.info>form>p>span{
+	    border-top: 1px dashed #2281dd;
+    width: 100%;
+    float: left;
+    position: absolute;
+    top: 17px;
+    left: 170px;
+}
+.info ul li{
+	text-align: center;
+}
+.info ul li span{
+	font-size: 26px;
+	color: #666666;
+	margin-top: 50px;	
+}
+.info ul li input[readonly]{
+	border:1px solid #fff;
+	background: none;
+}
+.info ul li input{
+	border:1px solid #ddd;
+	background: #FBFDFF;
+	text-align: center;
+}
+.info ul li span a {
+	font-size: 26px;
+	color: #2281DD;
+	text-decoration: underline;
+}
+.info span.info_btn{
+	width: 100px;
+	height: 72px;	
+	box-shadow: 1px 1px 6px #ccc;
+	border-radius: 4px;
+	text-align: center;
+	line-height: 72px;
+	border:0;
+	background: none;
+	font-size: 26px;
+	color: #2281DD;
+	position: absolute;
+    top: 50px;
+    right: 0;
+    padding: 0 25px;
+    cursor: pointer;
+}
+.info span.info_btn i{
+	float: left;
+	width: 24px;	
+	height: 28px;	
+	background: url(../img/icon_bianji.png) no-repeat;
+	margin-top: 23px;
+}
+.amendpass{
+	margin-top: 20px;
+}
+.amendpass .layui-form-label{
+	text-align: left;
+}
+.amendpass .layui-input-block{
+	margin-right: 50px;
+}
+.layui-layer .layui-layer-title{
+	background: #2281dd;
+	color:#fff;
+}
+.layui-layer .layui-layer-setwin a{
+	color: #fff;
+}
+.amendpass .layui-input-block button{
+	width: 120px;
+	height: 36px;
+	line-height: 36px;
+	background: #fff;
+	border:1px solid #2281dd;
+	color:#2281dd;
+	font-size: 20px;
+	margin-right: 20px;
+}
+.amendpass .layui-input-block button.active{
+	background: #2281dd;
+	color:#fff;
+}
+.history_btn{
+	float: right;
+	margin-top: 30px;
+}
+.history_btn button{
+	font-size: 20px;
+	color: #2281DD;
+	border: 1px solid #2281DD;
+	border-radius: 2px;
+	background: #fff;
+	width: 150px;
+	height: 50px;
+	margin-right: 30px;
+}
+.down_doc b{
+	float: left;
+	width: 22px;
+	height: 22px;
+}
+.down_doc{
+	position: relative;
+}
+.down_doc .layui-unselect{
+	display: none;
+	position: absolute;
+	top:45px;
+	left:7px;
+}
+.about_us {
+    margin-top: 50px;
+}
+.about_us ul {
+    width: 260px;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+.about_us ul li {
+    width: 120px;
+    float: left;
+    height: 50px;
+    text-align: center;
+    background: #F3F8FC;
+    margin-right: 20px;
+    border-radius: 3px;
+}
+.about_us ul li a {
+    display: block;
+    font-size: 20px;
+    color: #666666;
+    line-height: 50px;
+}
+.about_us ul li:last-child {
+    margin: 0;
+}
+.message {
+    display: none;
+}
+.message h2 {
+    margin-top: 50px;
+    font-size: 24px;
+    color: #333333;
+    padding-bottom: 10px;
+    padding-left: 215px;
+    border-bottom: 1px dashed #ccc;
+}
+.about_us ul li.active {
+    background: #2281DD;
+    color: #fff;
+}
+.about_us ul li.active a {
+    color: #fff;
+}
+.message .layui-input-block{
+	margin: 0;
+    width: 377px;
+    float: left;
+    margin-right: 15px;
+}
+.message .layui-input-block input{
+	    background: #F9F9F9;
+}
+.message form{
+	width: 770px;
+	margin: 0 auto;
+	margin-top: 20px;
+}
+.message form textarea{
+	width: 98%;
+	height: 160px;
+	background: #F9F9F9;
+	resize: none;
+	border:1px solid #ddd;
+	padding-left: 10px;
+	padding-top: 5px
+}
+.message .layui-form-item .layui-input-block:last-child{
+	margin-right: 0;
+}
+.message .layui-form-item{
+	text-align: center;
+}
+.message .layui-form-item button{
+	background: #F9F9F9;
+	font-size: 16px;
+	color: #2281DD;
+	border: 1px solid #288CE3;
+
+}
+.message ul li {
+    width: 255px;
+    height: 300px;
+    float: left;
+    margin: 0;
+    border: 1px solid #eee;
+    border-right: 0;
+    background: #fff;
+    text-align: center;
+}
+.message ul li p {
+    font-size: 18px;
+    color: #333333;
+}
+.message ul li span {
+    font-size: 14px;
+    color: #999999;
+    display: block;
+    margin-top: 15px;
+}
+.message ul{
+	    width: 770px;
+}
+.message ul li:last-child {
+    border-right: 1px solid #eee;
+}
+.amendpass,.check{
+	display: none;
+}
+.information .layui-form-select{
+	width: 286px;
+}
+.information .layui-form-select input{
+	font-size: 26px;
+	color: #666666!important;
+}
+.footer .img_link li:nth-child(1) a{
+	background: url("../img/youlian1.png") no-repeat;
+}
+.footer .img_link li:nth-child(2) a{
+	background: url("../img/youlian2.png") no-repeat;
+}
+.footer .img_link li:nth-child(3) a{
+	background: url("../img/youlian3.png") no-repeat;
+}
+
+.content{
+    display: none;
+}
+.message ul li img {
+    width: 60px;
+    height: 60px;
+    margin-top: 90px;
+    margin-bottom: 40px;
+}
+.downfile ul li:nth-child(3),.down_doc ul li:nth-child(3){
+	/*display: none;*/
+}
+.downfile ul li:last-child,.down_doc ul li:last-child{
+	float: right;
+}
+.check form{
+	padding: 30px 50px;
+}
+.check form .layui-form-item:last-child button{
+	width: 92px;
+	height: 32px;
+	font-size: 16px;
+	color: #fff;
+	background: #2281DD;
+	border: 0;
+	border-radius: 4px;
+	cursor: pointer
+}
+.btn-primary{
+	position: relative;
+}
+.btn-primary input{
+	opacity: 0;
+	width: 92px;
+	height: 32px;
+}
+.btn-primary span{
+	    width: 92px;
+    height: 32px;
+    font-size: 16px;
+    color: #fff;
+    background: #2281DD;
+    border: 0;
+    border-radius: 4px;
+    cursor: pointer;
+    /* opacity: 0; */
+    left: 0;
+    top: 0;
+    text-align: center;
+    line-height: 32px;
+    position: absolute;
+    z-index: -1;
+}
+/*2018.1.29*/
+.check img{
+	width: 100%;
+}

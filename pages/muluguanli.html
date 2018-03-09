@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>水文大数据平台</title>
+    <link rel="stylesheet" href="../resources/css/bootstrapStyle.css" type="text/css">
+    <link rel="stylesheet" href="../resources/css/style.css">
+    <link rel="stylesheet" href="../resources/css/style1.css">
+    <link rel="stylesheet" href="../layui/css/layui.css">
+    <script type="text/javascript" src="../resources/js/jquery.min.js"></script>
+    <!--<script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>-->
+    <script type="text/javascript" src="../resources/js/jquery.ztree.core.js"></script>
+    <script type="text/javascript" src="../resources/js/jquery.ztree.excheck.js"></script>
+    <script type="text/javascript" src="../resources/js/jquery.ztree.exedit.js"></script>
+    <style>
+        .add_catalog .layui-input-block {
+            margin-left: 0;
+            float: left;
+        }
+
+        .layui-input-block input {
+            width: 170px;
+        }
+    </style>
+</head>
+<body style="background:#fff;">
+<div class="title">
+    <ul class="title_cata clearfloat">
+        <li class="active"><a href="../pages/muluguanli.html">目录管理</a></li>
+        <li><a href="../pages/shujuguanli.html">数据管理</a></li>
+    </ul>
+</div>
+<div class="catalog">
+    <p>目录管理</p>
+    <div class="catalog_tree catalog_tree1">
+        <ul id="tree" class="ztree"></ul>
+    </div>
+    <div class="add_catalog00">
+        <!--<h3><i></i>添加目录 <b></b></h3>-->
+        <form action="" onsubmit="return false" class="layui-form ">
+            <label for="">
+                <span>父目录：</span>
+                <div class="layui-input-block">
+                    <select name="rID" lay-verify="required" class="parent_catalog">
+                        <option value=""></option>
+                        <option value="false">目录</option>
+                        <option value="true">资源</option>
+                    </select>
+                </div>
+            </label>
+            <label for="">
+                <span>类别：</span>
+                <div class="layui-input-block">
+                    <select name="city" lay-verify="required" class="resource_catalog">
+                        <option value=""></option>
+                        <option value="false">目录</option>
+                        <option value="true">资源</option>
+                    </select>
+
+                </div>
+                <div class="layui-input-block"><input class="coding_catalog layui-input" lay-verify="required"
+                                                      type="text" placeholder="请输入目录编码" name="code"></div>
+            </label>
+            <label for="">
+                <span>名称：</span>
+                <div class="layui-input-block">
+                    <input class="name_catalog layui-input" type="text" lay-verify="required" name="codeName">
+                </div>
+            </label>
+            <label class="textarea" for="">
+                <span>描述：</span><textarea id="" cols="30" rows="10" name="info" lay-verify="required"
+                                          class="layui-textarea"></textarea>
+            </label>
+            <label class="btn" for="">
+                <button type="reset" class="layui-btn layui-btn-primary">取消</button>
+                <button class="layui-btn" lay-submit lay-filter="formDemo">添加</button>
+            </label>
+        </form>
+    </div>
+</div>
+
+
+</body>
+<script src="../layui/layui.js" type="text/javascript" charset="utf-8"></script>
+<script src="../resources/js/config.js" type="text/javascript" charset="utf-8"></script>
+<script src="../resources/js/muluguanli.js" type="text/javascript" charset="utf-8"></script>
+</html>

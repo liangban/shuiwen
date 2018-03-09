@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>水文大数据平台</title>
+    <!--<link rel="stylesheet" href="../resources/css/bootstrap.min.css">-->
+    <link rel="stylesheet" href="../layui/css/layui.css" />
+    <link rel="stylesheet" href="../resources/css/bootstrapStyle.css" type="text/css">
+    <link rel="stylesheet" href="../resources/css/style.css">
+    <script src="../resources/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../resources/js/jquery.ztree.core.js"></script>
+    <script type="text/javascript" src="../resources/js/jquery.ztree.excheck.js"></script>
+    <script type="text/javascript" src="../resources/js/jquery.ztree.exedit.js"></script>
+</head>
+<style>
+    .col-1, .col-2, .col-3, .col-4, .col-5, .c0l-6, .c0l-7, .col-8, .col-9, .col-10, .c0l-11, .col-12 {
+        float: left;
+    }
+
+    .col-1 {
+        width: 8.33333%;
+    }
+
+    .col-2 {
+        width: 16.66666%;
+    }
+
+    .col-3 {
+        width: 25%;
+    }
+
+    .col-4 {
+        width: 33.333%;
+    }
+
+    .col-5 {
+        width: 41.66666%;
+    }
+
+    .col-6 {
+        width: 50%;
+    }
+
+    .col-7 {
+        width: 58.3333%;
+    }
+
+    .col-8 {
+        width: 66.6666%;
+    }
+
+    .col-9 {
+        width: 75%;
+    }
+
+    .col-10 {
+        width: 83.3333%;
+    }
+
+    .col-11 {
+        width: 91.6666%;
+    }
+
+    .col-12 {
+        width: 100%;
+    }
+
+    .row {
+        width: 100%;
+    }
+
+    .row:after {
+        clear: both;
+        content: '.';
+        display: block;
+        width: 0;
+        height: 0;
+        visibility: hidden;
+    }
+</style>
+<body style="background:#fff;">
+<div class="title">
+    <ul class="title_cata clearfloat">
+        <li class="active"><a href="../pages/jueseguanli.html">角色管理</a></li>
+        <li><a href="../pages/gongzuozuguanli.html">工作组管理</a></li>
+        <li><a href="../pages/jigouguanli.html">机构管理</a></li>
+        <li><a href="../pages/quanxianguanli.html">权限管理</a></li>
+        <li><a href="../pages/yonghuguanli.html">用户管理</a></li>
+        <li><a href="../pages/rizhiguanli.html">日志管理</a></li>
+    </ul>
+    <div class="title_btn row">
+        <div class="input-group">
+            <input class="form-control" type="text" placeholder="水温">
+            <div class="input-group-btn">
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">搜索</button>
+
+            </div>
+        </div>
+    </div>
+</div>
+<div class="catalog">
+    <p>角色管理</p>
+    <ul id="role" class="ztree"></ul>
+
+</div>
+
+<div class="catalog_authority">
+    <button onclick="location.href='xiugaiquanxian.html'">修改权限</button>
+</div>
+
+<div class="layer">
+    <div class="add_catalog add_role">
+        <h3><i></i>添加角色 <b class="layui-icon">&#x1006;</b></h3>
+        <form action="" onsubmit="return false" class="layui-form">
+            <label for="" class="clearfloat">
+                <span>父目录：</span>
+                <div class="layui-input-block">
+                    <select name="pRoleID" lay-verify="required" class="parent_catalog">
+                        <option value=""></option>
+                        <option value="-1">根目录</option>
+                        <!--<option value="false">目录</option>
+                        <option value="true">资源</option>-->
+                    </select>
+                </div>
+            </label>
+            <label for="" class="clearfloat">
+                <span>类型：</span><div class="layui-input-block">
+                <select name="roleType" lay-verify="required" class="resource_catalog">
+                    <option value=""></option>
+                    <option value="false">目录</option>
+                    <option value="true">角色</option>
+                </select>
+
+            </div>
+            </label>
+            <label for="" class="clearfloat">
+                <span>名称：</span>
+                <div class="layui-input-block">
+                    <input class="name_catalog layui-input" type="text" lay-verify="required" name="roleName">
+                </div>
+            </label>
+            <!--<label class="textarea" for="">
+                <span>描述：</span><textarea  id="" cols="30" rows="10" name="info" lay-verify="required"  class="layui-textarea"></textarea>
+            </label>-->
+            <label class="btn clearfloat" for="">
+                <button type="reset" class="layui-btn layui-btn-primary">清空</button>
+                <button class="layui-btn" lay-submit lay-filter="formadd">添加</button>
+            </label>
+        </form>
+    </div>
+    <div class="add_catalog get_user">
+        <h3><i></i>修改角色 <b class="layui-icon">&#x1006;</b></h3>
+        <form action="" class="layui-form" onsubmit="return false">
+            <label for="">
+                <span>角色组：</span>
+                <div class="layui-input-block clearfloat">
+                    <ul id="authority" class="ztree"></ul>
+                    <input type="hidden" name="add_authority">
+                </div>
+            </label>
+            <label class="btn" for="">
+                <button type="reset" class="layui-btn layui-btn-primary">取消</button>
+                <button class="layui-btn" lay-submit lay-filter="add_authority">修改</button>
+            </label>
+        </form>
+    </div>
+</div>
+
+
+</body>
+<script>
+    $(function () {
+        $('.data_content .details').on('click', function () {
+//            $('.layer').fadeIn();
+            if($('.layer').is(":visible")==false){
+                $('.layer').fadeIn()
+                $('.layer .add_catalog').hide();
+                $('.layer .add_role').show();
+            }
+        })
+        $('.add_catalog h3 b').on('click', function () {
+            $('.layer').fadeOut();
+        })
+    })
+</script>
+<script src="../layui/layui.js"></script>
+<script src="../resources/js/config.js"></script>
+<script src="../resources/js/xitongguanli.js"></script>
+<script src="../resources/js/quanxianjigou.js"></script>
+</html>

@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>水文大数据平台</title>
+    <!--<link rel="stylesheet" href="../resources/css/bootstrap.min.css">-->
+    	<link rel="stylesheet" type="text/css" href="../layui/css/layui.css"/>
+    <link rel="stylesheet" href="../resources/css/style.css">
+     <link rel="stylesheet" href="../resources/css/style1.css">
+    <script src="../resources/js/jquery.min.js"></script>
+    <script src="../layui/layui.js"></script>
+    <script type="text/javascript" src="../resources/js/jquery.ztree.core.js"></script>
+    <script type="text/javascript" src="../resources/js/jquery.ztree.excheck.js"></script>
+    <script type="text/javascript" src="../resources/js/jquery.ztree.exedit.js"></script>
+</head>
+<style>
+    .col-1, .col-2, .col-3, .col-4, .col-5, .c0l-6, .c0l-7, .col-8, .col-9, .col-10, .c0l-11, .col-12 {
+        float: left;
+    }
+
+    .col-1 {
+        width: 8.33333%;
+    }
+
+    .col-2 {
+        width: 16.66666%;
+    }
+
+    .col-3 {
+        width: 25%;
+    }
+
+    .col-4 {
+        width: 33.333%;
+    }
+
+    .col-5 {
+        width: 41.66666%;
+    }
+
+    .col-6 {
+        width: 50%;
+    }
+
+    .col-7 {
+        width: 58.3333%;
+    }
+
+    .col-8 {
+        width: 66.6666%;
+    }
+
+    .col-9 {
+        width: 75%;
+    }
+
+    .col-10 {
+        width: 83.3333%;
+    }
+
+    .col-11 {
+        width: 91.6666%;
+    }
+
+    .col-12 {
+        width: 100%;
+    }
+
+    .row {
+        width: 100%;
+    }
+
+    .row:after {
+        clear: both;
+        content: '.';
+        display: block;
+        width: 0;
+        height: 0;
+        visibility: hidden;
+    }
+</style>
+<body style="background:#fff;">
+<div class="title">
+    <ul class="title_cata clearfloat">
+        <li><a href="../pages/jueseguanli.html">角色管理</a></li>
+        <li><a href="../pages/gongzuozuguanli.html">工作组管理</a></li>
+        <li><a href="../pages/jigouguanli.html">机构管理</a></li>
+        <li><a href="../pages/quanxianguanli.html">权限管理</a></li>
+        <li><a href="../pages/yonghuguanli.html">用户管理</a></li>
+        <li class="active"><a href="../pages/rizhiguanli.html">日志管理</a></li>
+    </ul>
+    <div class="title_btn row">
+        <div class="input-group">
+            <input class="form-control" type="text" placeholder="水温">
+            <div class="input-group-btn">
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">搜索</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="catalog">
+    <p>日志管理</p>
+    <div class="ziyuanleixing row">
+    	<form action="" onsubmit="return false" class="layui-form">
+        <div class="layui-form-item">
+            <span>起止时间：</span>
+            <div class="layui-input-block">
+                <input type="text" class="layui-input" id="test1" lay-key="1">
+                <input type="hidden" class="startData layui-input" name="startTime" lay-filter="startTime"/>
+                <input type="hidden" class="endData layui-input" name="endTime" lay-filter="endTime"/>
+            </div>
+            <span>登录名称：</span>
+            <div class="layui-input-block">
+            	<input type="text" class="layui-input" name="email" lay-filter="email"/>
+            </div>
+            <button class="layui-btn layui-btn-normal" lay-submit lay-filter="formDemo">查询</button>
+        </div>
+        <!--<span style="margin-left: 30px;">登录名称：</span>
+        <div class="ctdisk_data input-group input_name">
+            <input type="data" class="" placeholder="">
+            <button>查询</button>
+        </div>-->
+        </form>
+    </div>
+
+</div>
+
+<div class="choose_data data_name">
+    <div class="data_title">
+        <ul class="row">
+            <li class="col-2">操作用户</li>
+            <!--<li class="col-2">ip地址</li>-->
+            <!--<li class="col-1">请求连接</li>-->
+            <!--<li class="col-1">请求方法</li>-->
+            <li class="col-2">请求操作</li>
+            <li class="col-2">开始时间</li>
+            <li class="col-2">结束时间</li>
+            <li class="col-2">结果状态</li>
+            <li class="col-2">操作</li>
+        </ul>
+    </div>
+    <div class="data_content">
+        暂无数据
+    </div>
+    <div id="rizhi"></div>
+</div>
+
+<div class="catalog_authority">
+    <!--<button onclick="location.href='xiugaiquanxian.html'">修改权限</button>-->
+</div>
+
+
+<div class="particulars">
+    <form action="" class="layui-form" onsubmit="return false">
+
+        <div class="layui-form-item">
+            <label for="" class="layui-form-label">ip地址：</label>
+            <div class="layui-input-block">
+                <span class="text2"></span>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label for="" class="layui-form-label">请求连接：</label>
+            <div class="layui-input-block">
+                <span class="text3"></span>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label for="" class="layui-form-label">请求方法：</label>
+            <div class="layui-input-block">
+                <span class="text4"></span>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label for="" class="layui-form-label">异常信息：</label>
+            <div class="layui-input-block">
+                <span class="text5"></span>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label for="" class="layui-form-label">请求参数：</label>
+            <div class="layui-input-block">
+                <span class="text6"></span>
+            </div>
+        </div>
+    </form>
+</div>
+</body>
+<script src="../resources/js/config.js"></script>
+<script src="../resources/js/xitongguanli.js"></script>
+<script>
+    $(function () {
+        $('.data_content .details').on('click', function () {
+            $('.layer').fadeIn();
+        })
+        $('.add_catalog h3 b').on('click', function () {
+            $('.layer').fadeOut();
+        })
+    })
+</script>
+</html>

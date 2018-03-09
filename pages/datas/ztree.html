@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>水文大数据平台</title>
+    <!--<link rel="stylesheet" href="../resources/css/bootstrap.min.css">-->
+    <link rel="stylesheet" href="../layui/css/layui.css"/>
+    <link rel="stylesheet" href="../resources/css/bootstrapStyle.css" type="text/css">
+    <link rel="stylesheet" href="../resources/css/style.css">
+    <script src="../resources/js/jquery.min.js"></script>
+    <script src="../layui/layui.js"></script>
+    <script type="text/javascript" src="../resources/js/jquery.ztree.core.js"></script>
+    <script type="text/javascript" src="../resources/js/jquery.ztree.excheck.js"></script>
+    <script type="text/javascript" src="../resources/js/jquery.ztree.exedit.js"></script>
+</head>
+<SCRIPT type="text/javascript">
+    <!--
+    var setting = {
+        view: {
+            selectedMulti: false
+        },
+        async: {
+            enable: true,
+            url: "getNode.php",
+            autoParam: ["id", "name=n", "level=lv"],
+            otherParam: {"otherParam": "zTreeAsyncTest"},
+            // dataFilter: filter
+        },
+
+    };
+
+    function refreshNode(e) {
+        var zTree = $.fn.zTree.getZTreeObj("treeDemo"),
+            type = e.data.type,
+            silent = e.data.silent,
+            nodes = zTree.getSelectedNodes();
+        zTree.reAsyncChildNodes(null, type, silent);
+
+    }
+
+    $(document).ready(function () {
+        $.fn.zTree.init($("#treeDemo"), setting);
+        $("#refreshNode").bind("click", {type: "refresh", silent: false}, refreshNode);
+        $("#refreshNodeSilent").bind("click", {type: "refresh", silent: true}, refreshNode);
+        $("#addNode").bind("click", {type: "add", silent: false}, refreshNode);
+        $("#addNodeSilent").bind("click", {type: "add", silent: true}, refreshNode);
+    });
+    //-->
+</SCRIPT>
+
+</HEAD>
+<style>
+    li {
+        margin-top: 20px;
+    }
+
+    p {
+        line-height: 20px;
+    }
+</style>
+
+<BODY>
+<h1>用 zTree 方法异步加载节点数据</h1>
+<h6>[ 文件路径: core/async_fun.html ]</h6>
+<div class="content_wrap">
+    <div class="zTreeDemoBackground left">
+        <ul id="treeDemo" class="ztree"></ul>
+    </div>
+    <div class="right">
+        <ul class="info clearfloat">
+            <li class="title"><h2>1、reAsyncChildNodes 方法操作说明</h2>
+                <ul class="list">
+
+                    <li><p>
+                        试试看：[ <a id="refreshNode" href="#" onclick="return false;">重新加载</a> ]&nbsp;&nbsp;&nbsp;&nbsp;[
+                        <a id="addNode" href="#" onclick="return false;">追加</a> ]</p>
+                    </li>
+                    <li><p><span class="highlight_red">“悄悄地”操作只能针对 折叠状态 的父节点</span><br/>
+                        试试看：[ <a id="refreshNodeSilent" href="#" onclick="return false;">悄悄地 重新加载</a> ]&nbsp;&nbsp;&nbsp;&nbsp;[
+                        <a id="addNodeSilent" href="#" onclick="return false;">悄悄地 追加</a> ]<br/>
+
+                        <ul id="log" class="log"></ul>
+                        </p>
+                    </li>
+                </ul>
+            </li>
+            <li class="title">
+                <ul class="list">
+
+                </ul>
+            </li>
+
+        </ul>
+    </div>
+</div>
+</BODY>
+</HTML>

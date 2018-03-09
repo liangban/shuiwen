@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>水文大数据平台</title>
+    <link rel="stylesheet" type="text/css" href="../layui/css/layui.css"/>
+    <link rel="stylesheet" href="../resources/css/style.css">
+    <script src="../resources/js/jquery.min.js"></script>
+    <script src="../resources/js/area.js"></script>
+</head>
+<style>
+    .col-1, .col-2, .col-3, .col-4, .col-5, .c0l-6, .c0l-7, .col-8, .col-9, .col-10, .c0l-11, .col-12 {
+        float: left;
+    }
+
+    .col-1 {
+        width: 8.33333%;
+    }
+
+    .col-2 {
+        width: 16.66666%;
+    }
+
+    .col-3 {
+        width: 25%;
+    }
+
+    .col-4 {
+        width: 33.333%;
+    }
+
+    .col-5 {
+        width: 41.66666%;
+    }
+
+    .col-6 {
+        width: 50%;
+    }
+
+    .col-7 {
+        width: 58.3333%;
+    }
+
+    .col-8 {
+        width: 66.6666%;
+    }
+
+    .col-9 {
+        width: 75%;
+    }
+
+    .col-10 {
+        width: 83.3333%;
+    }
+
+    .col-11 {
+        width: 91.6666%;
+    }
+
+    .col-12 {
+        width: 100%;
+    }
+
+    .row {
+        width: 100%;
+    }
+
+    .row:after {
+        clear: both;
+        content: '.';
+        display: block;
+        width: 0;
+        height: 0;
+        visibility: hidden;
+    }
+</style>
+<body style="background:#fff;">
+<div class="title">
+    <ul class="title_cata clearfloat">
+        <li><a href="../pages/chakanpeizhi.html">查看配置</a></li>
+        <li><a href="../pages/xinzengpeizhi.html">新增配置</a></li>
+        <li class="active"><a href="../pages/chakanshuju.html">查看数据</a></li>
+    </ul>
+</div>
+<form class="layui-form ">
+    <div class="catalog catalog1">
+        <p>查看配置</p>
+        <div class="ziyuanleixing row">
+            <span>资源类别：</span>
+            <div class="layui-input-inline ">
+                <select name="resourceID" lay-verify="required" lay-filter="reso" class="resoce">
+                    <option value=""></option>
+                </select>
+            </div>
+        </div>
+        <div class="ziyuanleixing row">
+            <span>起止时间：</span>
+            <div class="ctdisk_data input-group">
+                <div class="layui-input-inline ">
+                    <input type="text" placeholder="时间" lay-verify="required" class=" layui-input" id="date">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    </div>
+
+    <div class="ziyuanleixing row">
+        <span>配置类型：</span>
+        <div class="layui-input-inline ">
+            <select name="province" lay-filter="province" class="one">
+                <option value="">一级流域</option>
+            </select>
+        </div>
+        <div class="layui-input-inline ">
+            <select name="city" lay-filter="city" class="two">
+                <option value="">二级流域</option>
+            </select>
+        </div>
+        <div class="layui-input-inline">
+            <select name="area" lay-filter="area" class="three">
+                <option value="">三级流域/区</option>
+            </select>
+        </div>
+        <div class="layui-input-inline">
+            <select name="stationCode" lay-filter="cz" class="cz">
+                <option value="">测站</option>
+            </select>
+        </div>
+        <div class="layui-input-inline form1">
+            <button class="layui-btn layui-btn-disabled" lay-submit lay-filter="formDemo" disabled="disabled">查询
+            </button>
+        </div>
+
+    </div>
+</form>
+
+<div class="choose_data data_name">
+    <div class="data_title">
+        <ul class="row">
+            <li class="col-2">发布数据编号</li>
+            <li class="col-2">发布配置编号</li>
+            <li class="col-4">发布数据名称</li>
+            <li class="col-2">开始时间</li>
+            <li class="col-2">结束时间</li>
+        </ul>
+    </div>
+    <div class="data_content">
+        暂无数据
+    </div>
+</div>
+
+
+<script src="../layui/layui.js" type="text/javascript" charset="utf-8"></script>
+<script src="../resources/js/config.js" type="text/javascript" charset="utf-8"></script>
+<script src="../resources/js/chakanshuju.js" type="text/javascript" charset="utf-8"></script>
+</body>
+<input type="hidden" name="start" id="start" value=""/>
+<input type="hidden" name="end" id="end" value=""/>
+</html>

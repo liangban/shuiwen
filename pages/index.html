@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>水文大数据平台</title>
+    <link rel="stylesheet" href="../pages/plugins/layui/css/layui.css" media="all">
+    <link rel="stylesheet" href="../pages/build/css/app.css" media="all">
+</head>
+
+<body>
+<div class="layui-layout layui-layout-admin kit-layout-admin">
+    <div class="layui-header">
+        <div class="layui-logo">水文大数据平台</div>
+        <div class="layui-logo kit-logo-mobile">水文大数据平台</div>
+        <ul class="layui-nav layui-layout-right kit-nav">
+            <li class="layui-nav-item"><a href="../page/index.html">返回首页</a></li>
+            <li class="layui-nav-item"><a href="../page/xiazaishuju.html">数据中心</a></li>
+            <li class="layui-nav-item"><a href="../page/gerenzhongxin.html">个人中心</a></li>
+        </ul>
+    </div>
+
+    <div class="layui-side layui-bg-black kit-side">
+        <div class="layui-side-scroll">
+            <div class="kit-side-fold"><img src="../pages/build/images/head.png" alt="">
+                <span><i class="layui-icon">&#xe612;</i>弘禹水文</span>
+            </div>
+            <ul class="layui-nav layui-nav-tree" lay-filter="kitNavbar" kit-navbar>
+                <li class="layui-nav-item layui-nav-itemed">
+                    <a class="" href="javascript:;"><i class="ziyuan"></i><span> 数据资源</span></a>
+                    <dl class="layui-nav-child">
+                        <dd class="layui-this">
+                            <a href="javascript:;" kit-target data-options="{url:'../pages/muluguanli.html',icon:'',title:'目录管理',id:'1'}">
+                                <span> 目录管理</span></a>
+                        </dd>
+                        <dd>
+                            <a href="javascript:;" data-url="../pages/shujuguanli.html" data-icon="fa-user"
+                               data-title="数据管理" kit-target data-id='2'><i class="fa fa-user"></i><span> 数据管理</span></a>
+                        </dd>
+
+                    </dl>
+                </li>
+                <li class="layui-nav-item">
+                    <a href="javascript:;"><i class="fabu"  ></i><span> 数据发布</span></a>
+                    <dl class="layui-nav-child">
+                        <dd><a href="javascript:;" kit-target
+                               data-options="{url:'../pages/chakanpeizhi.html',icon:'',title:'查看发布配置',id:'27'}"><i
+                                class="layui-icon"></i><span> 查看发布配置</span></a></dd>
+                        <dd><a href="javascript:;" kit-target
+                               data-options="{url:'../pages/xinzengpeizhi.html',icon:'',title:'新增发布配置',id:'6'}"><i
+                                class="layui-icon"></i><span> 新增发布配置</span></a></dd>
+                        <dd><a href="javascript:;" kit-target data-url="../pages/chakanshuju.html" data-icon=""
+                               data-title="查看已发布数据" data-id="7"><i class="layui-icon"></i><span> 查看已发布数据</span></a></dd>
+                    </dl>
+                </li>
+                <li class="layui-nav-item">
+                    <a href="javascript:;"><i class="xitong"  ></i><span> 系统管理</span></a>
+                    <dl class="layui-nav-child">
+                        <dd><a href="javascript:;" kit-target
+                               data-options="{url:'../pages/jueseguanli.html',icon:'',title:'角色管理',id:'8'}"><span>角色管理</span></a>
+                        </dd>
+                        <dd><a href="javascript:;" kit-target
+                               data-options="{url:'../pages/gongzuozuguanli.html',icon:'',title:'工作组管理',id:'9'}"><span>工作组管理</span></a>
+                        </dd>
+                        <dd><a href="javascript:;" kit-target
+                               data-options="{url:'../pages/jigouguanli.html',icon:'',title:'机构管理',id:'10'}"><span>机构管理</span></a>
+                        </dd>
+                        <dd><a href="javascript:;" kit-target
+                               data-options="{url:'../pages/quanxianguanli.html',icon:'',title:'权限管理',id:'11'}"><span>权限管理</span></a>
+                        </dd>
+                        <dd><a href="javascript:;" kit-target
+                               data-options="{url:'../pages/yonghuguanli.html',icon:'',title:'用户管理',id:'12'}"><span>用户管理</span></a>
+                        </dd>
+                        <dd><a href="javascript:;" kit-target
+                               data-options="{url:'../pages/rizhiguanli.html',icon:'',title:'日志管理',id:'13'}"><span>日志管理</span></a>
+                        </dd>
+                    </dl>
+                </li>
+                <li class="layui-nav-item">
+                    <a href="javascript:;"><i class="zuche"  ></i><span> 注册审批</span></a>
+                    <dl class="layui-nav-child">
+                        <dd><a href="javascript:;" kit-target
+                               data-options="{url:'../pages/chakanshenqing.html',icon:'',title:'查看申请',id:'14'}"><span>查看申请</span></a>
+                        </dd>
+                        <dd><a href="javascript:;" kit-target data-url="../pages/chakanshenpi.html" data-icon="&#xe628;"
+                               data-title="查看审批" data-id="15"><span>查看审批</span></a></dd>
+
+                    </dl>
+                </li>
+
+                <li class="layui-nav-item">
+                    <a href="javascript:;"><i class="xiazai"></i><span> 下载管理</span></a>
+                    <dl class="layui-nav-child">
+                        <dd><a href="javascript:;" kit-target
+                               data-options="{url:'../pages/shujuxiazai.html',icon:'',title:'数据下载查看',id:'18'}"><span>数据下载查看</span></a>
+                        </dd>
+                        <dd><a href="javascript:;" kit-target
+                               data-options="{url:'../pages/yonghuxiazai.html',icon:'',title:'用户下载查看',id:'19'}"><span>用户下载查看</span></a>
+                        </dd>
+                    </dl>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="layui-body" id="container">
+        <div style="padding: 15px;">主体内容加载中,请稍等...</div>
+    </div>
+</div>
+<script src="../pages/plugins/layui/layui.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    var message;
+    layui.config({
+        base: '../pages/build/js/'
+    }).use(['app', 'message'], function () {
+        var app = layui.app,
+            $ = layui.jquery,
+            layer = layui.layer;
+        //将message设置为全局以便子页面调用
+        message = layui.message;
+        //主入口
+        app.set({
+            type: 'iframe'
+        }).init();
+
+        var url = "http://www.tomylee.top/"
+
+        $.ajax({
+            url: url + '/user',
+            xhrFields: {withCredentials: true},
+            type: 'get',
+            success: function (data) {
+                if (data.status == true) {
+                    console.log(data)
+                    var userID = data.data.userID;
+                    var userType = data.data.userType;
+                    if (!userID == '') {
+                        console.log(userID)
+                        $('.kit-side-fold span').html('<i class="layui-icon">&#xe612;</i>' + data.data.username + '')
+                    }
+                    if (userType == 0) {
+//                  $('.login ul li:nth-child(3)').
+                    }
+
+                }
+                else {
+                    console.log(1)
+                }
+            },
+            error: function (XMLHttpRequest, textStatus, errorThrown) {
+//            layer.msg('网络错误')
+            }
+
+        })
+
+    });
+</script>
+</body>
+</html>
+
+
+
+

@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>水文大数据平台</title>
+    <link rel="stylesheet" href="../layui/css/layui.css">
+    <link rel="stylesheet" href="../resources/css/desk-style.css">
+    <script src="../resources/js/jquery.min.js"></script>
+    <script src="../layui/layui.js"></script>
+</head>
+<body>
+<div class="top">
+    <div class="main">
+        <p class="welcome">欢迎您使用长江水文大数据共享网！</p>
+        <div class="login">
+            <ul>
+                <li><a class="login_1" href="../page/yonghuzhuce.html"><i></i><span>快速注册</span></a></li>
+                <li><a class="login_2" href="../page/yonghudenglu.html"><i></i><span>立即登录</span></a></li>
+                <li><a href="../page/lianxiwomen.html"><span>联系我们</span></a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<section class="head">
+    <div class="main">
+        <ul class="clearfloat  layui-row">
+            <li class="layui-col-sm4 logo"><img src="../resources/img/logo.png" alt=""><p>水文大数据共享平台</p><p>www.tomylee.top</p></li>
+            <li class="layui-col-sm4"><input type="text" class="layui-input"><i class="head_search">搜索</i></li>
+            <li class="layui-col-sm4"><p>联系电话：<span>400-882-8868</span></p><i class="head_tel"></i></li>
+        </ul>
+    </div>
+</section>
+<section class="login_content">
+    <img src="../resources/img/login_bg.png" alt="">
+    <div class="main">
+        <form action="" class="layui-form" onsubmit="return false">
+            <h3>修改登录密码</h3>
+            <div class="layui-form-item border">
+                <label for="" class="layui-form-label"><i class="user_name"></i></label>
+                <div class="layui-input-block">
+                    <input type="text" name="loginName" required  lay-verify="required" placeholder="请输入注册时填写的邮箱" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item content_auth border">
+                <label for="" class="layui-form-label"><i class="form_key"></i></label>
+                <div class="layui-input-block">
+                    <input type="text" name="captcha" required  lay-verify="required" placeholder="请输入验证码" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item border auth_code ">
+                <button type="button" class="forget_code">发送验证码</button>
+            </div>
+            <div class="layui-form-item border">
+                <label for="" class="layui-form-label"><i class="form_password"></i></label>
+                <div class="layui-input-block">
+                    <input type="password" name="password" required  lay-verify="required" placeholder="请输入密码" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item border">
+                <label for="" class="layui-form-label"><i class="form_password"></i></label>
+                <div class="layui-input-block">
+                    <input type="password" name="confirmPassword" required  lay-verify="required" placeholder="请确认密码" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item content_btn">
+                <div class="layui-input-block">
+                    <button class="layui-btn" lay-submit="" lay-filter="register">修改密码</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</section>
+</body>
+<script src="../resources/js/config.js"></script>
+<script src="../resources/js/login.js"></script>
+</html>

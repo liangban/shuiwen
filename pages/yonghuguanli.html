@@ -1,0 +1,624 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>水文大数据平台</title>
+    <!--<link rel="stylesheet" href="../resources/css/bootstrap.min.css">-->
+    <link rel="stylesheet" href="../layui/css/layui.css"/>
+    <link rel="stylesheet" href="../resources/css/bootstrapStyle.css" type="text/css">
+    <link rel="stylesheet" href="../resources/css/style.css">
+    <script src="../resources/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../resources/js/jquery.ztree.core.js"></script>
+    <script type="text/javascript" src="../resources/js/jquery.ztree.excheck.js"></script>
+    <script type="text/javascript" src="../resources/js/jquery.ztree.exedit.js"></script>
+</head>
+<style>
+    .col-1, .col-2, .col-3, .col-4, .col-5, .c0l-6, .c0l-7, .col-8, .col-9, .col-10, .c0l-11, .col-12 {
+        float: left;
+    }
+
+    .col-1 {
+        width: 8.33333%;
+    }
+
+    .col-2 {
+        width: 16.66666%;
+    }
+
+    .col-3 {
+        width: 25%;
+    }
+
+    .col-4 {
+        width: 33.333%;
+    }
+
+    .col-5 {
+        width: 41.66666%;
+    }
+
+    .col-6 {
+        width: 50%;
+    }
+
+    .col-7 {
+        width: 58.3333%;
+    }
+
+    .col-8 {
+        width: 66.6666%;
+    }
+
+    .col-9 {
+        width: 75%;
+    }
+
+    .col-10 {
+        width: 83.3333%;
+    }
+
+    .col-11 {
+        width: 91.6666%;
+    }
+
+    .col-12 {
+        width: 100%;
+    }
+
+    .row {
+        width: 100%;
+    }
+
+    .row:after {
+        clear: both;
+        content: '.';
+        display: block;
+        width: 0;
+        height: 0;
+        visibility: hidden;
+    }
+</style>
+<body style="background:#fff;">
+<div class="title">
+    <ul class="title_cata clearfloat">
+        <li><a href="../pages/jueseguanli.html">角色管理</a></li>
+        <li><a href="../pages/gongzuozuguanli.html">工作组管理</a></li>
+        <li><a href="../pages/jigouguanli.html">机构管理</a></li>
+        <li><a href="../pages/quanxianguanli.html">权限管理</a></li>
+        <li class="active"><a href="../pages/yonghuguanli.html">用户管理</a></li>
+        <li><a href="../pages/rizhiguanli.html">日志管理</a></li>
+    </ul>
+    <div class="title_btn row">
+        <div class="input-group">
+            <input class="form-control" type="text" placeholder="水温">
+            <div class="input-group-btn">
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">搜索
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="catalog">
+    <p>用户管理</p>
+    <div class="ziyuanleixing row">
+        <form action="" onsubmit="return false" class="layui-form">
+            <span>用户名称：</span>
+            <div class="layui-input-block">
+                <input type="text" class="layui-input" name="user" lay-filter="required">
+            </div>
+            <button class="layui-btn layui-btn-normal" lay-submit="" lay-filter="usermanage">查询</button>
+        </form>
+    </div>
+
+</div>
+
+<div class="choose_data data_name">
+    <div class="data_title">
+        <ul class="row">
+            <li class="col-1">用户编码</li>
+            <li class="col-2">用户名称</li>
+            <li class="col-2">登录名称</li>
+            <li class="col-2">用户类别</li>
+            <li class="col-2">注册时间</li>
+            <!--<li class="col-1">工作组</li>-->
+            <!--<li class="col-1">角色</li>-->
+            <li class="col-3">操作</li>
+        </ul>
+    </div>
+    <div class="data_content">
+        暂无数据
+    </div>
+</div>
+
+<div class="catalog_authority">
+    <!--<button onclick="location.href='xiugaiquanxian.html'">修改权限</button>-->
+</div>
+<div class="layer">
+    <div class="add_catalog add_role">
+        <h3><i></i>修改数据 <b class="layui-icon">&#x1006;</b></h3>
+        <form action="" class="layui-form" onsubmit="return false">
+            <label for="" class="layui-row">
+                <span>用户昵称：</span>
+                <div class="layui-input-block">
+                    <input class="name_catalog layui-input" type="text" lay-verify="required" name="userName">
+                </div>
+            </label>
+            <!--<label for="">-->
+            <!--&lt;!&ndash;<span>邮箱：</span>&ndash;&gt;-->
+            <!--<div class="layui-input-block">-->
+            <!--<input class="name_catalog layui-input" type="hidden" lay-verify="required" name="loginName">-->
+            <!--</div>-->
+            <!--</label>-->
+            <label for="" class="layui-row">
+                <span>手机号码：</span>
+                <div class="layui-input-block">
+                    <input class="name_catalog layui-input" type="text" lay-verify="required" name="phoneNumber">
+
+                </div>
+            </label>
+            <label for="" class="layui-row">
+                <span>用户性质：</span>
+                <div class="layui-input-block">
+                    <select name="userProperty" lay-verify="required" class="resource_catalog" lay-filter="user_nature">
+                        <option value=""></option>
+                        <option value="0">个人</option>
+                        <option value="1">企业</option>
+                    </select>
+                </div>
+            </label>
+            <label for="" class="layui-row">
+                <span>公司名称：</span>
+                <div class="layui-input-block">
+                    <input class="name_catalog layui-input" type="text" name="companyName">
+                </div>
+            </label>
+
+            <label class="btn layui-row" for="">
+                <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                <button class="layui-btn" lay-submit lay-filter="editoruser">修改</button>
+            </label>
+        </form>
+    </div>
+    <div class="add_catalog password">
+        <h3><i></i>重置密码 <b class="layui-icon">&#x1006;</b></h3>
+        <form action="" class="layui-form" onsubmit="return false">
+            <label for="">
+                <span>新密码：</span>
+                <div class="layui-input-block">
+                    <input class="name_catalog layui-input" type="password" lay-verify="required" name="password">
+                </div>
+            </label>
+            <label for="">
+                <span>确认密码：</span>
+                <div class="layui-input-block">
+                    <input class="name_catalog layui-input" type="password" lay-verify="required"
+                           name="confirmPassword">
+                </div>
+            </label>
+            <label class="btn" for="">
+                <button type="reset" class="layui-btn layui-btn-primary">取消</button>
+                <button class="layui-btn" lay-submit lay-filter="xg_code">添加</button>
+            </label>
+        </form>
+    </div>
+    <div class="add_catalog get_user">
+        <h3><i></i>修改角色组 <b class="layui-icon">&#x1006;</b></h3>
+        <form action="" class="layui-form" onsubmit="return false">
+            <label for="">
+                <span>角色组：</span>
+                <div class="layui-input-block clearfloat">
+                    <ul id="tree" class="ztree"></ul>
+                    <input type="hidden" name="roleId">
+                </div>
+            </label>
+            <label class="btn" for="">
+                <button type="reset" class="layui-btn layui-btn-primary">取消</button>
+                <button class="layui-btn" lay-submit lay-filter="xg_role">添加</button>
+            </label>
+        </form>
+    </div>
+    <div class="add_catalog groups">
+        <h3><i></i>修改工作组 <b class="layui-icon">&#x1006;</b></h3>
+        <form action="" class="layui-form" onsubmit="return false">
+            <label for="">
+                <span>工作组：</span>
+                <div class="layui-input-block">
+                    <ul id="grouptree" class="ztree"></ul>
+                    <input type="hidden" name="workGroups">
+                </div>
+            </label>
+            <label class="btn" for="">
+                <button type="reset" class="layui-btn layui-btn-primary">取消</button>
+                <button class="layui-btn" lay-submit lay-filter="xg_group">添加</button>
+            </label>
+        </form>
+    </div>
+</div>
+</body>
+<script src="../layui/layui.js"></script>
+<script src="../resources/js/config.js"></script>
+<script>
+    $(function () {
+        $(document).on('click', '.nav_code', function () {
+            if ($('.layer').is(":visible") == false) {
+                $('.layer').show()
+                $('.layer .add_catalog').hide();
+                $('.layer .password').show();
+            }
+        })
+    })
+</script>
+<script src="../resources/js/workgroup.js"></script>
+<script>
+    layui.use(['laydate', 'layer', 'api', 'form', 'element'], function () {
+        var api = layui.api,
+            $ = layui.jquery;
+        var form = layui.form;
+        var num;
+        var arr = new Array();
+        var x = "";
+        var role = $('.groups form input').val();
+
+
+//        角色
+        $(document).on('click', '.nav_role', function () {
+            num = $(this).parents('ul.row').find('li[infoid]').attr('infoid');
+            console.log(num)
+            api.getroletree(function (data) {
+                console.log(data)
+                if (data.status == true) {
+                    var zNodes = data.data;
+                    var setting = {
+                        view: {
+                            addHoverDom: false,
+                            removeHoverDom: removeHoverDom,
+                            selectedMulti: false
+                        },
+                        check: {
+                            enable: true
+                        },
+                        data: {
+                            simpleData: {
+                                enable: true
+                            }
+                        },
+                        edit: {
+                            enable: false,
+                            showRemoveBtn: false,
+                            showRenameBtn: false,
+                            showReaddBtn: false
+                        },
+                        callback: {
+                            onRemove: onRemove,
+                            onCheck: zTreeOnCheck,
+                            onRename: false
+                        }
+
+                    };
+                    api.getrol(num, function (data) {
+                        console.log(data)
+                        if (data.status == true) {
+                            if(data.data==null){
+                                layer.msg(data.msg)
+                            }
+                            else{
+                                $.each(data.data, function (i, v) {
+                                    var node_name = v.roleName;
+                                    $.each($('.get_user .ztree li'), function (a, b) {
+                                        // console.log($(this).find('.node_name').text())
+                                        if ($(this).find('.node_name').text() == node_name) {
+                                            // console.log($(this))
+                                            // $(this).find(".chk").removeClass("checkbox_false_full").addClass("checkbox_true_full")
+                                            $(this).find(".chk").click()
+                                        }
+                                    })
+                                    arr.push("" + v.roleID + "");
+                                });
+                            }
+
+                        }
+                        else {
+                            if (data.data == null) {
+                                layer.msg(data.msg)
+                            }
+                            else {
+                                layer.msg(data.data[0].msg)
+                            }
+                        }
+                    })
+
+                    function zTreeOnCheck(event, treeId, treeNode) {
+                        console.log(event, treeId, treeNode);
+                        x += treeNode.id + ",";
+                        arr.push(treeNode.id)
+                        var brr = new Array();
+                        $.each(arr, function (i, v) {
+                            console.log(v)
+                            var items = v;
+                            if ($.inArray(items, brr) == -1) {
+                                brr.push(items);
+                            }
+
+                        })
+                        console.log(brr)
+                        $('.get_user form input').val(brr)
+
+                    };
+                    $('.groups form input').val(x);
+                    $(document).ready(function () {
+                        $.fn.zTree.init($("#tree"), setting, zNodes);
+                        console.log($(this))
+                        console.log(zNodes)
+                        console.log(zNodes.id, zNodes.pid)
+                        console.log(setting)
+                    });
+
+                    function onRemove(i, v, data) {
+                        var number = data.id;
+                        // console.log(1)
+                        console.log(number)
+                        $.ajax({
+                            url: url + 'admin/role/' + number,
+                            dataType: 'json',
+                            type: 'delete',
+                            success: function (data) {
+                                if (data.status == true) {
+                                    // $('.button.remove').on('click',function(){
+                                    // $$(node, setting).remove();
+                                    $('li[infoid=' + number + ']').remove();
+                                    // $(this).parents('li.leve10').remove()
+                                    // })
+                                    layer.msg(data.msg)
+                                }
+                                else {
+                                    layer.msg(data.msg)
+                                }
+                            },
+                        })
+
+                    }
+
+                    $(document).ready(function () {
+                        $.fn.zTree.init($("#tree"), setting, zNodes);
+                        // console.log(setting)
+                    });
+                    var newCount = 1;
+
+                    function addHoverDom(treeId, treeNode) {
+                        // console.log(treeId)
+                        // console.log(treeNode.id)
+
+                        var sObj = $("#" + treeNode.tId + "_span");
+                        // console.log(sObj)
+                        sObj.parents('li.level0').attr('infoid', treeNode.id);
+                        if (treeNode.editNameFlag || $("#addBtn_" + treeNode.tId).length > 0) return;
+                        var addStr = "<span class='button add' id='addBtn_" + treeNode.tId +
+                            "' title='add node' onfocus='this.blur(); infoid='" + treeNode.id + "''></span>";
+                        sObj.after(addStr);
+                        var btn = $("#addBtn_" + treeNode.tId);
+                        if (btn) btn.bind("click", function () {
+                            var zTree = $.fn.zTree.getZTreeObj("tree");
+                            $('.layer').show();
+                            // zTree.addNodes(treeNode, {
+                            //     id: (100 + newCount),
+                            //     pid: treeNode.id,
+                            //     name: "new node" + (newCount++)
+                            // });
+                            return false;
+                        });
+                    };
+
+                    function removeHoverDom(treeId, treeNode) {
+                        $("#addBtn_" + treeNode.tId).unbind().remove();
+                    };
+                    var option = ''
+                    $.each(data.data, function (i, v) {
+                        if (v.pid == '-1') {
+                            // console.log($(this))
+                            option += '<option value="' + v.pid + '">' + v.name + '</option>'
+                        }
+                    })
+                    $('.layui-input-block .parent_catalog').append(option);
+                    form.render();
+                }
+
+
+            })
+            //修改用户角色
+            form.on('submit(xg_role)', function (data) {
+                var roles = data.field.roleId;
+                console.log(num)
+                console.log(roles)
+                layer.closeAll('loading')
+                console.log(1)
+                api.amenduser(num, roles, function (data) {
+                    console.log(data);
+//                    if (data.status == true) {
+//                        layer.msg(data.msg)
+//                        $('.add_role b.layui-icon').click();
+//                    }
+//                    else {
+//                        if (data.data == null) {
+//                            layer.msg(data.msg)
+//                        }
+//                        else {
+//                            layer.msg(data.data[0].msg)
+//                        }
+//                    }
+                })
+            })
+            if ($('.layer').is(":visible") == false) {
+                $('.layer').show();
+                $('.layer .add_catalog').hide();
+                $('.layer .get_user').show();
+            }
+        })
+//        工作组
+        $(document).on('click', '.nav_group', function () {
+            num = $(this).parents('ul.row').find('li[infoid]').attr('infoid');
+            api.getgrouptree(function (data) {
+                console.log(data)
+                if (data.status == true) {
+                    var zNodes = data.data;
+                    var setting = {
+                        view: {
+                            addHoverDom: false,
+                            removeHoverDom: removeHoverDom,
+                            selectedMulti: false
+                        },
+                        check: {
+                            enable: true
+                        },
+                        data: {
+                            simpleData: {
+                                enable: true
+                            }
+                        },
+                        edit: {
+                            enable: false,
+                            showRemoveBtn: false,
+                            showRenameBtn: false,
+                        },
+                        callback: {
+                            onRemove: onRemove,
+                            onCheck: zTreeOnCheck,
+                            onRename: false
+                        }
+
+                    };
+                    api.getworkgroup(num, function (data) {
+                        console.log(data)
+                        if (data.status == true) {
+                            $.each(data.data, function (i, v) {
+                                var node_name = v.authorityName;
+                                $.each($('.groups .ztree li'), function (a, b) {
+                                    // console.log($(this).find('.node_name').text())
+                                    if ($(this).find('.node_name').text() == node_name) {
+                                        // console.log($(this))
+                                        // $(this).find(".chk").removeClass("checkbox_false_full").addClass("checkbox_true_full")
+                                        $(this).find(".chk").click()
+                                    }
+                                })
+                                arr.push("" + v.roleID + "");
+                            });
+                        }
+                        else {
+                            if (data.data == null) {
+                                layer.msg(data.msg)
+                            }
+                            else {
+                                layer.msg(data.data[0].msg)
+                            }
+                        }
+                    })
+                    function zTreeOnCheck(event, treeId, treeNode) {
+                        x += treeNode.id + ",";
+                        arr.push(treeNode.id)
+                        var brr = new Array();
+                        $.each(arr, function (i, v) {
+                            var items = v;
+                            if ($.inArray(items, brr) == -1) {
+                                brr.push(items);
+                            }
+                        })
+                        console.log(brr)
+                        $('.groups form input').val(brr)
+
+                    };
+                    $('.groups form input').val(x);
+                    $(document).ready(function () {
+                        $.fn.zTree.init($("#grouptree"), setting, zNodes);
+                        console.log($(this))
+                        console.log(zNodes)
+                        console.log(zNodes.id, zNodes.pid)
+                    });
+
+                    function onRemove(i, v, data) {
+                        var number = data.id;
+                        console.log(number)
+                        $.ajax({
+                            url: url + 'admin/role/' + number,
+                            dataType: 'json',
+                            type: 'delete',
+                            success: function (data) {
+                                if (data.status == true) {
+                                    $('li[infoid=' + number + ']').remove();
+                                    layer.msg(data.msg)
+                                }
+                                else {
+                                    layer.msg(data.msg)
+                                }
+                            },
+                        })
+                    }
+
+                    $(document).ready(function () {
+                        $.fn.zTree.init($("#grouptree"), setting, zNodes);
+                    });
+                    var newCount = 1;
+
+                    function addHoverDom(treeId, treeNode) {
+                        var sObj = $("#" + treeNode.tId + "_span");
+                        sObj.parents('li.level0').attr('infoid', treeNode.id);
+                        if (treeNode.editNameFlag || $("#addBtn_" + treeNode.tId).length > 0) return;
+                        var addStr = "<span class='button add' id='addBtn_" + treeNode.tId +
+                            "' title='add node' onfocus='this.blur(); infoid='" + treeNode.id + "''></span>";
+                        sObj.after(addStr);
+                        var btn = $("#addBtn_" + treeNode.tId);
+                        if (btn) btn.bind("click", function () {
+                            var zTree = $.fn.zTree.getZTreeObj("grouptree");
+                            $('.layer').show();
+                            return false;
+                        });
+                    };
+
+                    function removeHoverDom(treeId, treeNode) {
+                        $("#addBtn_" + treeNode.tId).unbind().remove();
+                    };
+                    var option = ''
+                    $.each(data.data, function (i, v) {
+                        if (v.pid == '-1') {
+                            option += '<option value="' + v.pid + '">' + v.name + '</option>'
+                        }
+                    })
+                    $('.layui-input-block .parent_catalog').append(option);
+                    form.render();
+                }
+            })
+            //修改用户角色
+            form.on('submit(xg_group)', function (data) {
+                var workGroups = data.field.workGroups;
+                console.log(num)
+                console.log(workGroups)
+                api.amendgroup(num, workGroups, function (datas) {
+                    console.log(datas);
+                    if (datas.status == true) {
+                        layer.msg(datas.msg)
+                        setTimeout(function () {
+                            $('.groups b.layui-icon').click();
+                        }, 2000)
+
+                    }
+                    else {
+                        if (datas.data == null) {
+                            layer.msg(datas.msg)
+                        }
+                        else {
+                            layer.msg(datas.data[0].msg)
+                        }
+                    }
+                })
+            })
+            if ($('.layer').is(":visible") == false) {
+                $('.layer').show()
+                $('.layer .add_catalog').hide();
+                $('.layer .groups').show();
+            }
+        })
+    })
+</script>
+</html>

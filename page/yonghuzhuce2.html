@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>水文大数据平台</title>
+    <link rel="stylesheet" href="../layui/css/layui.css">
+    <link rel="stylesheet" href="../resources/css/desk-style.css">
+    <script src="../resources/js/jquery.min.js"></script>
+    <script src="../layui/layui.js"></script>
+</head>
+<body>
+<div class="top">
+    <div class="main">
+        <p class="welcome">欢迎您使用长江水文大数据共享网！</p>
+        <div class="login">
+            <ul>
+                <li><a class="login_1" href="../page/yonghuzhuce.html"><i></i><span>快速注册</span></a></li>
+                <li><a class="login_2" href="../page/yonghudenglu.html"><i></i><span>立即登录</span></a></li>
+                <li><a href="../page/lianxiwomen.html"><span>联系我们</span></a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<section class="head">
+    <div class="main">
+        <ul class="clearfloat  layui-row">
+            <li class="layui-col-sm4 logo"><img src="../resources/img/logo.png" alt=""><p>水文大数据共享平台</p><p>www.tomylee.top</p></li>
+            <li class="layui-col-sm4"><input type="text" class="layui-input"><i class="head_search">搜索</i></li>
+            <li class="layui-col-sm4"><p>联系电话：<span>400-882-8868</span></p><i class="head_tel"></i></li>
+        </ul>
+    </div>
+</section>
+<section class="login_content">
+    <img src="../resources/img/login_bg.png" alt="">
+    <div class="main">
+        <form action="" class="layui-form" onsubmit="return false">
+            <h3>请如实填写信息，以便获得及时的服务</h3>
+            <div class="layui-form-item">
+                <p>账号信息</p>
+            </div>
+            <div class="layui-form-item border">
+                <label for="" class="layui-form-label"><i class="form_password"></i></label>
+                <div class="layui-input-block">
+                    <input type="text" name="userName" required  lay-verify="required" placeholder="用户昵称" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item border">
+                <label for="" class="layui-form-label"><i class="form_password"></i></label>
+                <div class="layui-input-block">
+                    <input type="text" name="loginName" required  lay-verify="required" placeholder="邮箱" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item border">
+                <label for="" class="layui-form-label"><i class="form_password"></i></label>
+                <div class="layui-input-block">
+                    <input type="password" name="password" required  lay-verify="required" placeholder="密码" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item border">
+                <label for="" class="layui-form-label"><i class="form_password"></i></label>
+                <div class="layui-input-block">
+                    <input type="password" name="confirmPassword" required  lay-verify="required" placeholder="确认密码" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item border">
+                <label for="" class="layui-form-label"><i class="form_password"></i></label>
+                <div class="layui-input-block">
+                    <input type="text" name="phoneNumber" required  lay-verify="required" placeholder="联系手机" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <p>用户类别</p>
+            </div>
+            <div class="layui-form-item">
+                <div class="layui-input-block">
+                    <input type="radio" name="userProperty" value="单位用户" title="单位用户">
+                    <input type="radio" name="userProperty" value="个人用户" title="个人用户" checked="">
+                </div>
+            </div>
+            <div class="layui-form-item border units">
+                <label for="" class="layui-form-label"><i class="form_password"></i></label>
+                <div class="layui-input-block">
+                    <input type="text" name="companyName" required  lay-verify="" placeholder="单位名称
+" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item content_btn">
+                <!--<label for="" class="layui-form-label layui-icon">&#xe612;</label>-->
+                <div class="layui-input-block">
+                    <button class="layui-btn" lay-submit="" lay-filter="registerAccount">注册账号</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</section>
+</body>
+<script src="../resources/js/config.js"></script>
+<script src="../resources/js/personal.js"></script>
+<script src="../resources/js/login.js"></script>
+</html>
